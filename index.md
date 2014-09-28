@@ -7,48 +7,70 @@ description: I'm a PhD student in Computer Science at the University of Washingt
 cvurl: resume.pdf
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel nisl ac ligula congue ultricies. Fusce dictum tempus felis. Integer viverra luctus ligula, in bibendum erat accumsan sit amet. Duis fermentum risus nisi, ac lacinia velit tincidunt et. Nam pretium sagittis gravida. Vestibulum porttitor lacus et est tempor dignissim. Praesent in metus sapien. Pellentesque interdum orci leo, in pulvinar metus fringilla pretium. Praesent ipsum libero, porttitor sit amet eleifend non, euismod id ex.
+Projects
+--------
 
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
+#### A Type System for Format Strings
 
-Praesent consectetur varius varius. Nullam egestas dui a arcu varius, ac fermentum sapien maximus. Curabitur placerat congue posuere. Integer non feugiat nibh. Donec suscipit purus et lorem scelerisque varius. Sed ex lorem, lacinia a ex id, pulvinar vulputate turpis. Maecenas molestie vehicula urna, non fermentum justo viverra eget. Vivamus nisl orci, luctus a tempus sit amet, facilisis sit amet justo. Sed dapibus nibh vitae leo rhoncus, vitae semper lectus posuere.
+Most programming languages support format strings, but their use is error-prone.
+Using the wrong format string syntax, or passing the wrong number or type of
+arguments, leads to unintelligible text output, program crashes, or security
+vulnerabilities.
 
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
+This paper presents a type system that guarantees that calls to format string
+APIs will never fail. In Java, this means that the API will not throw
+exceptions. In C, this means that the API will not return negative values,
+corrupt memory, etc.
 
-Praesent consectetur varius varius. Nullam egestas dui a arcu varius, ac fermentum sapien maximus. Curabitur placerat congue posuere. Integer non feugiat nibh. Donec suscipit purus et lorem scelerisque varius. Sed ex lorem, lacinia a ex id, pulvinar vulputate turpis. Maecenas molestie vehicula urna, non fermentum justo viverra eget. Vivamus nisl orci, luctus a tempus sit amet, facilisis sit amet justo. Sed dapibus nibh vitae leo rhoncus, vitae semper lectus posuere.
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
+We instantiated this type system for Java's Formatter API, and evaluated it on 6
+large and well-maintained open-source projects. Format string bugs are common in
+practice (our type system found 104 bugs), and the annotation burden on the user
+of our type system is low (on average, for every bug found, only 1.0 annotations
+need to be written).
 
+Download: [Paper (PDF)][TSFS-PAPER-PDF], 
+          [Slides (PDF)][TSFS-SLIDES-PDF], 
+          [Slides (ODP)][TSFS-SLIDES-ODP], 
+          [Demo Paper (PDF)][TSFS-DEMO-PDF], 
+          [Format String Checker Implementation][TSFS-IMPL]
 
-Praesent consectetur varius varius. Nullam egestas dui a arcu varius, ac fermentum sapien maximus. Curabitur placerat congue posuere. Integer non feugiat nibh. Donec suscipit purus et lorem scelerisque varius. Sed ex lorem, lacinia a ex id, pulvinar vulputate turpis. Maecenas molestie vehicula urna, non fermentum justo viverra eget. Vivamus nisl orci, luctus a tempus sit amet, facilisis sit amet justo. Sed dapibus nibh vitae leo rhoncus, vitae semper lectus posuere.
-Praesent consectetur varius varius. Nullam egestas dui a arcu varius, ac fermentum sapien maximus. Curabitur placerat congue posuere. Integer non feugiat nibh. Donec suscipit purus et lorem scelerisque varius. Sed ex lorem, lacinia a ex id, pulvinar vulputate turpis. Maecenas molestie vehicula urna, non fermentum justo viverra eget. Vivamus nisl orci, luctus a tempus sit amet, facilisis sit amet justo. Sed dapibus nibh vitae leo rhoncus, vitae semper lectus posuere.
-Praesent consectetur varius varius. Nullam egestas dui a arcu varius, ac fermentum sapien maximus. Curabitur placerat congue posuere. Integer non feugiat nibh. Donec suscipit purus et lorem scelerisque varius. Sed ex lorem, lacinia a ex id, pulvinar vulputate turpis. Maecenas molestie vehicula urna, non fermentum justo viverra eget. Vivamus nisl orci, luctus a tempus sit amet, facilisis sit amet justo. Sed dapibus nibh vitae leo rhoncus, vitae semper lectus posuere.
-Praesent consectetur varius varius. Nullam egestas dui a arcu varius, ac fermentum sapien maximus. Curabitur placerat congue posuere. Integer non feugiat nibh. Donec suscipit purus et lorem scelerisque varius. Sed ex lorem, lacinia a ex id, pulvinar vulputate turpis. Maecenas molestie vehicula urna, non fermentum justo viverra eget. Vivamus nisl orci, luctus a tempus sit amet, facilisis sit amet justo. Sed dapibus nibh vitae leo rhoncus, vitae semper lectus posuere.
-Praesent consectetur varius varius. Nullam egestas dui a arcu varius, ac fermentum sapien maximus. Curabitur placerat congue posuere. Integer non feugiat nibh. Donec suscipit purus et lorem scelerisque varius. Sed ex lorem, lacinia a ex id, pulvinar vulputate turpis. Maecenas molestie vehicula urna, non fermentum justo viverra eget. Vivamus nisl orci, luctus a tempus sit amet, facilisis sit amet justo. Sed dapibus nibh vitae leo rhoncus, vitae semper lectus posuere.
-Praesent consectetur varius varius. Nullam egestas dui a arcu varius, ac fermentum sapien maximus. Curabitur placerat congue posuere. Integer non feugiat nibh. Donec suscipit purus et lorem scelerisque varius. Sed ex lorem, lacinia a ex id, pulvinar vulputate turpis. Maecenas molestie vehicula urna, non fermentum justo viverra eget. Vivamus nisl orci, luctus a tempus sit amet, facilisis sit amet justo. Sed dapibus nibh vitae leo rhoncus, vitae semper lectus posuere.
-Praesent consectetur varius varius. Nullam egestas dui a arcu varius, ac fermentum sapien maximus. Curabitur placerat congue posuere. Integer non feugiat nibh. Donec suscipit purus et lorem scelerisque varius. Sed ex lorem, lacinia a ex id, pulvinar vulputate turpis. Maecenas molestie vehicula urna, non fermentum justo viverra eget. Vivamus nisl orci, luctus a tempus sit amet, facilisis sit amet justo. Sed dapibus nibh vitae leo rhoncus, vitae semper lectus posuere.
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
+Publications
+------------
 
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
+> "A type system for format strings" 
+  by Konstantin Weitz, Gene Kim, Siwakorn Srisakaokul, and Michael D. Ernst.
+  *In ISSTA 2014.* <br/>
+> Download: [Paper (PDF)][TSFS-PAPER-PDF], 
+            [BibTeX Entry][TSFS-BIB],
+            [Slides (PDF)][TSFS-SLIDES-PDF], 
+            [Slides (ODP)][TSFS-SLIDES-ODP]
+ 
+> "A format string checker for Java"
+  by Konstantin Weitz, Siwakorn Srisakaokul, Gene Kim, and Michael D. Ernst.
+  *In ISSTA 2014.* <br/>
+> Download: [Paper (PDF)][TSFS-DEMO-PDF], 
+            [BibTeX Entry][TSFS-DEMO-BIB],
+            [Slides (PDF)][TSFS-SLIDES-PDF], 
+            [Slides (ODP)][TSFS-SLIDES-ODP]
+ 
+> Real-Time Collaborative Analysis with (Almost) Pure SQL: A Case Study in Biogeochemical Oceanography
+  by Daniel Halperin, Francois Ribalet, Konstantin Weitz, Mak A. Saito, Bill Howe, and E. Virginia Armbrust.
+  *In SSDBM 2013.* <br/>
+> Download: [Paper (PDF)][OCEAN-PAPER-PDF], 
+            [BibTeX Entry][OCEAN-BIB],
+            [Talk][OCEAN-TALK]
 
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
+Posts
+-----
 
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
+[TSFS-PAPER-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014.pdf
+[TSFS-SLIDES-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.pdf
+[TSFS-SLIDES-ODP]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.odp
+[TSFS-DEMO-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-demo.pdf
+[TSFS-IMPL]: http://types.cs.washington.edu/checker-framework/current/checkers-manual.html#formatter-checker
+[TSFS-BIB]: papers/tsfs.bib
+[TSFS-DEMO-BIB]: papers/tsfs-demo.bib
 
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
-
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
-
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
-
-
-
-
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
-
-Praesent consectetur varius varius. Nullam egestas dui a arcu varius, ac fermentum sapien maximus. Curabitur placerat congue posuere. Integer non feugiat nibh. Donec suscipit purus et lorem scelerisque varius. Sed ex lorem, lacinia a ex id, pulvinar vulputate turpis. Maecenas molestie vehicula urna, non fermentum justo viverra eget. Vivamus nisl orci, luctus a tempus sit amet, facilisis sit amet justo. Sed dapibus nibh vitae leo rhoncus, vitae semper lectus posuere.
-Pellentesque in velit purus. Fusce scelerisque lorem erat, ac venenatis turpis pretium et. Duis viverra tellus mattis fringilla tincidunt. Donec in velit hendrerit, dignissim sem vitae, iaculis ipsum. Vestibulum quis sapien hendrerit, ultrices urna tempor, posuere nisi. Maecenas facilisis urna nunc, sit amet convallis sapien finibus quis. In rutrum sagittis porta. Phasellus vulputate in sapien et rhoncus. Vestibulum neque felis, consequat sed fermentum vel, tincidunt sagittis velit. Suspendisse potenti. In ut lacus id enim hendrerit sollicitudin sit amet vitae felis. Nullam eu maximus metus.
-
-Praesent consectetur varius varius. Nullam egestas dui a arcu varius, ac fermentum sapien maximus. Curabitur placerat congue posuere. Integer non feugiat nibh. Donec suscipit purus et lorem scelerisque varius. Sed ex lorem, lacinia a ex id, pulvinar vulputate turpis. Maecenas molestie vehicula urna, non fermentum justo viverra eget. Vivamus nisl orci, luctus a tempus sit amet, facilisis sit amet justo. Sed dapibus nibh vitae leo rhoncus, vitae semper lectus posuere.
-Curabitur non efficitur dui, eu ultrices augue. Integer elementum feugiat leo at congue. Praesent vel pellentesque felis. Cras at sapien placerat erat auctor porttitor. Suspendisse sollicitudin, mauris ut pellentesque imperdiet, ipsum dui facilisis nibh, eu mollis erat eros eu est. Vivamus a metus aliquet, vehicula magna nec, porttitor mauris. Vivamus at ultrices nisi. Maecenas sit amet euismod felis. Pellentesque feugiat laoreet sapien, nec vestibulum urna sagittis eu. Curabitur vulputate ultricies diam eget pellentesque. Nunc euismod, tortor nec sollicitudin tempor, sapien est mattis felis, ut porta diam sem in dolor.
-
-Donec tristique, nisi vitae blandit dignissim, justo dui facilisis lectus, sit amet interdum nisi dolor ut sem. Aenean justo lacus, varius ut ipsum a, viverra porttitor diam. Phasellus convallis lacus nulla. Etiam porttitor eros vel semper vehicula. In maximus pharetra nulla non venenatis. Pellentesque vel lobortis dolor. Nunc auctor libero quis lorem aliquam cursus. Phasellus elementum tellus sed mi eleifend, quis fermentum mi elementum. In mauris arcu, porttitor at lectus eu, dictum pulvinar mauris. Duis sed vehicula nunc. Vivamus vitae ullamcorper orci. Maecenas aliquam nunc ex, vel aliquam odio ornare sit amet. Integer tincidunt consequat metus, vel placerat nisi dignissim faucibus. Praesent venenatis luctus sem, ac mollis felis accumsan vel. Integer lorem neque, imperdiet a sodales vel, fringilla eget magna. Nam quis est leo.
+[OCEAN-PAPER-PDF]: http://homes.cs.washington.edu/~dhalperi/pubs/halperin_2013_ssdbm_geomics_case_study.pdf
+[OCEAN-TALK]: http://research.microsoft.com/apps/video/default.aspx?id=200713
+[OCEAN-BIB]: papers/ocean.bib
