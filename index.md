@@ -3,10 +3,9 @@ content_type: md
 permalink: /
 layout: main
 title: Konstantin Weitz
-description: I'm a PhD student in Computer Science at the University of Washington. My research is focused on Programming Languages and Software Engineering, primarily Program Verification. My adviser is Michael D. Ernst.
+description: I'm a PhD student in Computer Science at the University of Washington. My research is focused on Programming Languages and Software Engineering, primarily Program Verification.
+cvurl: resume.pdf
 ---
-
-
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel nisl ac ligula congue ultricies. Fusce dictum tempus felis. Integer viverra luctus ligula, in bibendum erat accumsan sit amet. Duis fermentum risus nisi, ac lacinia velit tincidunt et. Nam pretium sagittis gravida. Vestibulum porttitor lacus et est tempor dignissim. Praesent in metus sapien. Pellentesque interdum orci leo, in pulvinar metus fringilla pretium. Praesent ipsum libero, porttitor sit amet eleifend non, euismod id ex.
 
