@@ -1,0 +1,8 @@
+baseurl:  
+themeurl: theme
+logourl:  profile.png
+repositoryurl: http://github.com/konne88
+
+layouts: ./theme/_layouts
+markdown: kramdown
+highlighter: pygments
