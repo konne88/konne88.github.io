@@ -33,10 +33,10 @@ Publications
             [BibTeX Entry][OCEAN-BIB],
             [Talk][OCEAN-TALK]
 
-Projects
---------
+Open Source Projects
+--------------------
 
-### Dataflow Analysis in Google error-prone
+### Dataflow Analysis for Google error-prone
 
 <div class="moving-image">
   <img class="fg" src="projects/ep-fg.png"></img>
@@ -99,6 +99,43 @@ Download: [Paper (PDF)][TSFS-PAPER-PDF],
           [Demo Paper (PDF)][TSFS-DEMO-PDF], 
           [Format String Checker Implementation][TSFS-IMPL]
 
+<br/>
+
+### Hardware Assisted Resource Overcommitment for the Linux KVM on System Z
+
+<div class="moving-image">
+  <img class="fg" src="projects/kvm-fg.png"></img>
+  <img class="bg" src="projects/kvm-bg.png"></img>
+</div>
+
+One important advantage of virtualizing a computer’s physical resources is that
+it enables resource overcommitment (more resources are promised than can
+be delivered, in the hope that they will not actually be used).
+
+Traditionally, memory overcommitment has been handled by 
+  lazily assigning memory to the virtualized guest, 
+  dynamically redistributing the guests’ memory, or 
+  swapping out guest memory.
+These techniques have problems, that we overcame by sharing more information 
+about memory usage between the hypervisor (Linux KVM) and guest 
+(any Operating System), in an approach called Collaborative Memory Management 
+(CMM). 
+The code is part of the Linux kernel (see
+  [this patch][KVM-CMM], and
+  [this follow up patch][KVM-PTE]).
+
+A spinlock is a commonly used locking primitive that spins in an idle loop until
+the accessed resource becomes unlocked.
+If the CPU is overcommited (there are more virtual cores than physical cores)
+not all virtual cores can run at the same time.
+In such a scenario, holding a spinlock can waste large amounts of CPU time.
+We overcame this problem by sharing information about held spinlocks between
+the hypervisor and guest, which allows the hypervisor to make better CPU 
+scheduling descisions.
+The code is part of the Linux kernel (see [this patch][KVM-DIAG9C]).
+
+<br/>
+
 Posts
 -----
 
@@ -121,6 +158,9 @@ Posts
 
 [CF-LINK]: http://checkerframework.org
 
+[KVM-DIAG9C]: https://github.com/torvalds/linux/commit/41628d334361670d825fb03c04568f5ef9f084dc
+[KVM-CMM]: https://github.com/torvalds/linux/commit/b31288fa83b2bcc8834e1e208e9526b8bd5ce361
+[KVM-PTE]: https://github.com/torvalds/linux/commit/45961722f8e30ceab9d135b1ddc0947d53aef7c3
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus gravida orci eget pretium. Curabitur eget purus arcu. Mauris eu venenatis mi, eget elementum sem. Sed quam ligula, posuere sagittis congue et, cursus id libero. Fusce luctus mattis enim a congue. Cras ac libero eget tortor mattis scelerisque vel id nulla. Aliquam in cursus enim. Aliquam mi ex, dapibus quis dui sed, semper porta arcu. Aliquam sit amet nisi nec magna vulputate vulputate.
 
