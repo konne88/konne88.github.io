@@ -26,7 +26,7 @@ Publications
             [Slides (PDF)][TSFS-SLIDES-PDF], 
             [Slides (ODP)][TSFS-SLIDES-ODP]
  
-> Real-Time Collaborative Analysis with (Almost) Pure SQL: A Case Study in Biogeochemical Oceanography
+> "Real-Time Collaborative Analysis with (Almost) Pure SQL: A Case Study in Biogeochemical Oceanography"
   by Daniel Halperin, Francois Ribalet, Konstantin Weitz, Mak A. Saito, Bill Howe, and E. Virginia Armbrust.
   *In SSDBM 2013.* <br/>
 > Download: [Paper (PDF)][OCEAN-PAPER-PDF], 
