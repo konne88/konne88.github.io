@@ -20,7 +20,7 @@ connected to Haskell types.
 
 Let us define that a natural number $$n$$ is related to a
 
-- type $$T$$ iff $$ n = \text{terms inhabiting } T $$
+- type $$T$$ iff $$ n = \text{number of terms inhabiting } T $$
 - set $$S$$ iff $$ n = \vert S \vert $$
 - proposition $$P$$ iff $$ n > 0 \iff P $$
 
