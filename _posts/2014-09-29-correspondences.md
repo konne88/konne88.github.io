@@ -52,6 +52,11 @@ $$ S(n) $$:          [successor][SUCC],
 $$ \vert S \vert $$: [cardinality][CARD], and
 $$ [0,n] $$:         [interval][INTV].
 
+There are a couple of holes in the table. Most are straigt forward to fill in,
+they just don't seem to have a decidicated symbol. The hole in
+the natural numbers can be filled in with $$\aleph_0$$ if we consider the 
+[cardinal numbers][CARDINAL].
+
 Why is it useful to know these correspondences? 
 
 One reason is that it allows us to use the reasoning strategies from one domain,
@@ -88,9 +93,6 @@ Similarly, there should be an uncountable number of ways to implement
 `Nat -> Bool` (see [Luke Palmer's blog][LUKE]). But we also know, due to the 
 limited number of ascii characters, that there can only be countably many 
 implementations.
-
-There is no natural number in the table for the `Nat` column. Should there be an 
-[cardinal number][CARDINAL], or [ordinal number][ORDINAL]?
 
 [CURRY]: http://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence
 [CROSS]: http://en.wikipedia.org/wiki/Cartesian_product
