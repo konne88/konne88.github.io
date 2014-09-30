@@ -90,7 +90,7 @@ limited number of ascii characters, that there can only be countably many
 implementations.
 
 There is no natural number in the table for the `Nat` column. Should there be an 
-[ordinal number][ORDINAL]?
+[cardinal number][CARDINAL], or [ordinal number][ORDINAL]?
 
 [CURRY]: http://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence
 [CROSS]: http://en.wikipedia.org/wiki/Cartesian_product
@@ -103,4 +103,5 @@ There is no natural number in the table for the `Nat` column. Should there be an
 [CHURCH]: http://en.wikipedia.org/wiki/Church_encoding
 [LUKE]: http://lukepalmer.wordpress.com/2012/01/26/computably-uncountable/
 [ORDINAL]: http://en.wikipedia.org/wiki/Ordinal_number
+[CARDINAL]: http://en.wikipedia.org/wiki/Cardinal_number
 [CHRIS]: http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/
