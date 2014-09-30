@@ -1,7 +1,9 @@
 themeurl: /theme
 logourl: /profile.png
 iconurl: /icon.png 
+repositoryurl: https://github.com/konne88/konne88.github.io
 
+excerpt_separator: <!--more-->
 layouts: ./theme/_layouts
 markdown: kramdown
 highlighter: pygments

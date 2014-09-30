@@ -5,10 +5,10 @@ layout: main
 header_style: height:260px;
 click: scrollTo(0)
 topnav:
-- text: Publications
-  url: javascript:scrollToHeading('publications')
 - text: Projects
   url: javascript:scrollToHeading('open-source-projects')
+- text: Publications
+  url: javascript:scrollToHeading('publications')
 - text: Posts
   url: javascript:scrollToHeading('posts')
 title: Konstantin Weitz
@@ -21,32 +21,6 @@ info: <div id="description" class="description">
         <button type="button" class="btn btn-default" onclick="download('resume.pdf')">Download Resume</button>
       </div>
 ---
-
-Publications
-------------
-
-> "A type system for format strings" 
-  by Konstantin Weitz, Gene Kim, Siwakorn Srisakaokul, and Michael D. Ernst.
-  *In ISSTA 2014.* <br/>
-> Download: [Paper (PDF)][TSFS-PAPER-PDF], 
-            [BibTeX Entry][TSFS-BIB],
-            [Slides (PDF)][TSFS-SLIDES-PDF], 
-            [Slides (ODP)][TSFS-SLIDES-ODP]
- 
-> "A format string checker for Java"
-  by Konstantin Weitz, Siwakorn Srisakaokul, Gene Kim, and Michael D. Ernst.
-  *In ISSTA 2014.* <br/>
-> Download: [Paper (PDF)][TSFS-DEMO-PDF], 
-            [BibTeX Entry][TSFS-DEMO-BIB],
-            [Slides (PDF)][TSFS-SLIDES-PDF], 
-            [Slides (ODP)][TSFS-SLIDES-ODP]
- 
-> "Real-Time Collaborative Analysis with (Almost) Pure SQL: A Case Study in Biogeochemical Oceanography"
-  by Daniel Halperin, Francois Ribalet, Konstantin Weitz, Mak A. Saito, Bill Howe, and E. Virginia Armbrust.
-  *In SSDBM 2013.* <br/>
-> Download: [Paper (PDF)][OCEAN-PAPER-PDF], 
-            [BibTeX Entry][OCEAN-BIB],
-            [Talk][OCEAN-TALK]
 
 Open Source Projects
 --------------------
@@ -151,15 +125,41 @@ The code is part of the Linux kernel (see [this patch][KVM-DIAG9C]).
 
 <br/>
 
+Publications
+------------
+
+> "A type system for format strings" 
+  by Konstantin Weitz, Gene Kim, Siwakorn Srisakaokul, and Michael D. Ernst.
+  *In ISSTA 2014.* <br/>
+> Download: [Paper (PDF)][TSFS-PAPER-PDF], 
+            [BibTeX Entry][TSFS-BIB],
+            [Slides (PDF)][TSFS-SLIDES-PDF], 
+            [Slides (ODP)][TSFS-SLIDES-ODP]
+ 
+> "A format string checker for Java"
+  by Konstantin Weitz, Siwakorn Srisakaokul, Gene Kim, and Michael D. Ernst.
+  *In ISSTA 2014.* <br/>
+> Download: [Paper (PDF)][TSFS-DEMO-PDF], 
+            [BibTeX Entry][TSFS-DEMO-BIB],
+            [Slides (PDF)][TSFS-SLIDES-PDF], 
+            [Slides (ODP)][TSFS-SLIDES-ODP]
+ 
+> "Real-Time Collaborative Analysis with (Almost) Pure SQL: A Case Study in Biogeochemical Oceanography"
+  by Daniel Halperin, Francois Ribalet, Konstantin Weitz, Mak A. Saito, Bill Howe, and E. Virginia Armbrust.
+  *In SSDBM 2013.* <br/>
+> Download: [Paper (PDF)][OCEAN-PAPER-PDF], 
+            [BibTeX Entry][OCEAN-BIB],
+            [Talk][OCEAN-TALK]
+
 Posts
 -----
 
+<div class="posts">
 {% for post in site.posts %}
-  <h3>{{ post.title }}</h3>
   {{ post.excerpt }}
-  <a class="readmore" href="{{ post.url }}"> Read more ... </a>
+  <a href="{{ post.url }}"> Read more ... </a>
 {% endfor %}
-
+</div>
 
 [TSFS-PAPER-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014.pdf
 [TSFS-SLIDES-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.pdf

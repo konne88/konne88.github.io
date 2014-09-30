@@ -3,21 +3,20 @@ content_type: md
 layout: main
 header_style: max-height:50px;
 click: download('/')
-topnav:
-title: The Number, Type, Set, Proposition Correspondence
+title: Konstantin Weitz
 info:
 ---
 
-During my undergrad I was often confused by the semingly arbitrary overloading
-of mathematical operators. For example, why did mathematicians decide to use
-$$\cdot$$ to mean $$\wedge$$?
+The Natural Number, Type, Set, and Proposition Correspondence
+-------------------------------------------------------------
 
-The [Curry Howard Correspondence][CURRY] provided an explanation why functional
-programming languages use `->` for the function type. [Chris Taylor][CHRIS] 
-explains in his blog how the natural numbers correspond to types.
+In this post, I'm showing connections between natural numbers, types, sets and
+propositions. This is similar to the [Curry Howard correspondence][CURRY] which 
+shows a connection between functional programming languages and propositions, or 
+[Chris Taylor's blog post][CHRIS] which explains how the natural numbers are 
+connected to Haskell types.
 
-In this post I'll show the connections between natural numbers, types, sets and 
-propositions.
+<!--more-->
 
 Let us define that a natural number $$n$$ is related to a
 
@@ -27,6 +26,10 @@ Let us define that a natural number $$n$$ is related to a
 
 In the following table, the natural number of each row is related to 
 all other cells in the row (assuming the inputs $$A$$, $$B$$, ... are related).
+
+Consider for example the 5th row.
+For the arbitrary natural number $$A=3$$, and the related type `data A = a | b | c`,
+$$ S(3) $$ is related to `Maybe A`.
 
 Natural Number              | Type           | Set                        | Proposition
 ----------------------------|----------------|----------------------------|------------------
@@ -49,12 +52,16 @@ $$ S(n) $$:          [successor][SUCC],
 $$ \vert S \vert $$: [cardinality][CARD], and
 $$ [0,n] $$:         [interval][INTV].
 
-Why is this useful to know these correspondences? 
+Why is it useful to know these correspondences? 
 
 One reason is that it allows us to use the reasoning strategies from one domain,
 and to apply them to another one. In a proof assistant like Coq, we might be
 able to take a powerful tactic like `omega`, and apply it to reasoning about the
 size of sets.
+
+It also allows us to decifer semingly arbitrary overloading of mathematical
+operators. For a long time I, for example, didn't understand why
+mathematicians decided to use $$\cdot$$ to mean $$\wedge$$.
 
 Thinking about correspondences also allows us to make good definitions for corner
 cases. For example, in the domain of numbers, it is not entirely clear
@@ -73,12 +80,12 @@ return any element in `B a`).
 Using the same reasoning, we would expect that there is a huge number of 
 implementations for the type `(T:Type) -> T` (for every element `T` in the 
 "Set of all Sets", we can choose to return any element in `T`).
-But, it turns out that there is (propably due to [Parametricity][PARAM]), no 
+But, it turns out that there is, due to [parametricity][PARAM], no 
 way to implement a function of this type. In fact, this type is the
 [Church Encoding][CHURCH] of the empty type.
 
 Similarly, there should be an uncountable number of ways to implement 
-`Nat -> Bool` (see [Luke Palmer's blog][LUKE]) but we also know, due to the 
+`Nat -> Bool` (see [Luke Palmer's blog][LUKE]). But we also know, due to the 
 limited number of ascii characters, that there can only be countably many 
 implementations.
 
