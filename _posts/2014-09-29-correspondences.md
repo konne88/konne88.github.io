@@ -1,0 +1,99 @@
+---
+content_type: md
+layout: main
+header_style: max-height:50px;
+click: download('/')
+topnav:
+title: The Number, Type, Set, Proposition Correspondence
+info:
+---
+
+During my undergrad I was often confused by the semingly arbitrary overloading
+of mathematical operators. For example, why did mathematicians decide to use
+$$\cdot$$ to mean $$\wedge$$?
+
+The [Curry Howard Correspondence][CURRY] provided an explanation why functional
+programming languages use `->` for the function type. [Chris Taylor][CHRIS] 
+explains in his blog how the natural numbers correspond to types.
+
+In this post I'll show the connections between natural numbers, types, sets and 
+propositions.
+
+Let us define that a natural number $$n$$ is related to a
+
+- type $$T$$ iff $$ n = \text{terms inhabiting } T $$
+- set $$S$$ iff $$ n = \vert S \vert $$
+- proposition $$P$$ iff $$ n > 0 \iff P $$
+
+In the following table, the natural number of each row is related to 
+all other cells in the row (assuming the inputs $$A$$, $$B$$, ... are related).
+
+Natural Number              | Type           | Set                        | Proposition
+----------------------------|----------------|----------------------------|------------------
+ $$ 0 $$                    | `Void`         | $$ \emptyset $$            | $$ \bot $$ 
+ $$ 1 $$                    | `()`           | $$ \{ a \} $$              | $$ \top $$ 
+ $$ 2 $$                    | `Bool`         | $$ \{ a,b \} $$            | $$ \top $$ 
+                            | `Nat`          | $$ \mathbb{N} $$           | $$ \top $$
+ $$ S(A) $$                 | `Maybe A`      |                            | 
+ $$ A + B $$                | `Either A B`   | $$ A \uplus B $$           | $$ A \vee B $$
+ $$ A \cdot B $$            | `(A,B)`        | $$ A \times B $$           | $$ A \wedge B $$
+ $$ B^A $$                  | `A -> B`       | $$ B^A $$                  | $$ A \implies B $$
+ $$ \sum_{a:[0,A]}{S_a}  $$ | `{a:A & S a}`  | $$ \biguplus_{a:A}{S_a} $$ | $$ \exists_{a:A}{S_a} $$
+ $$ \prod_{a:[0,A]}{S_a} $$ | `(a:A) -> S a` |                            | $$ \forall_{a:A}{S_a} $$
+
+Some of the less known symbols are
+$$ \times $$:        [cartesian product][CROSS],
+$$ \uplus $$:        [disjoint union][UPLUS],
+$$ \{ a \} $$:       [singleton][SINGL],
+$$ S(n) $$:          [successor][SUCC],
+$$ \vert S \vert $$: [cardinality][CARD], and
+$$ [0,n] $$:         [interval][INTV].
+
+Why is this useful to know these correspondences? 
+
+One reason is that it allows us to use the reasoning strategies from one domain,
+and to apply them to another one. In a proof assistant like Coq, we might be
+able to take a powerful tactic like `omega`, and apply it to reasoning about the
+size of sets.
+
+Thinking about correspondences also allows us to make good definitions for corner
+cases. For example, in the domain of numbers, it is not entirely clear
+what $$0^0$$ should be, as 
+  $$\lim_{x \to 0}{0^x} = 0$$ and 
+  $$\lim_{x \to 0}{x^0} = 1$$.
+In the domain of propositions, on the other hand, it is obvious that
+$$\bot \implies \bot$$ should be $$\top$$.
+
+### Open Questions
+
+In the above discussion, we realized that there are $$\prod_{a:A}{B_a}$$ ways
+to implement `(a:A) -> B a` (for every `a`, our implementation can choose to
+return any element in `B a`).
+
+Using the same reasoning, we would expect that there is a huge number of 
+implementations for the type `(T:Type) -> T` (for every element `T` in the 
+"Set of all Sets", we can choose to return any element in `T`).
+But, it turns out that there is (propably due to [Parametricity][PARAM]), no 
+way to implement a function of this type. In fact, this type is the
+[Church Encoding][CHURCH] of the empty type.
+
+Similarly, there should be an uncountable number of ways to implement 
+`Nat -> Bool` (see [Luke Palmer's blog][LUKE]) but we also know, due to the 
+limited number of ascii characters, that there can only be countably many 
+implementations.
+
+There is no natural number in the table for the `Nat` column. Should there be an 
+[ordinal number][ORDINAL]?
+
+[CURRY]: http://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence
+[CROSS]: http://en.wikipedia.org/wiki/Cartesian_product
+[UPLUS]: http://en.wikipedia.org/wiki/Disjoint_union
+[SINGL]: http://en.wikipedia.org/wiki/Singleton_(mathematics)
+[SUCC]: http://en.wikipedia.org/wiki/Successor_function
+[CARD]: http://en.wikipedia.org/wiki/Cardinality
+[INTV]: http://en.wikipedia.org/wiki/Interval_(mathematics)
+[PARAM]: http://en.wikipedia.org/wiki/Parametricity
+[CHURCH]: http://en.wikipedia.org/wiki/Church_encoding
+[LUKE]: http://lukepalmer.wordpress.com/2012/01/26/computably-uncountable/
+[ORDINAL]: http://en.wikipedia.org/wiki/Ordinal_number
+[CHRIS]: http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/

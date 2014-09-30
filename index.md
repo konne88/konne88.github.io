@@ -2,9 +2,24 @@
 content_type: md
 permalink: /
 layout: main
+header_style: height:260px;
+click: scrollTo(0)
+topnav:
+- text: Publications
+  url: javascript:scrollToHeading('publications')
+- text: Projects
+  url: javascript:scrollToHeading('open-source-projects')
+- text: Posts
+  url: javascript:scrollToHeading('posts')
 title: Konstantin Weitz
-description: I'm a PhD student in Computer Science at the University of Washington. My research is focused on Programming Languages and Software Engineering, primarily Program Verification.
-cvurl: resume.pdf
+info: <div id="description" class="description">
+        I'm a PhD student in Computer Science at the University of Washington.
+        My research is focused on Programming Languages and Software Engineering, 
+        primarily Program Verification.
+      </div>
+      <div class="buttons">
+        <button type="button" class="btn btn-default" onclick="download('resume.pdf')">Download Resume</button>
+      </div>
 ---
 
 Publications
@@ -139,6 +154,13 @@ The code is part of the Linux kernel (see [this patch][KVM-DIAG9C]).
 Posts
 -----
 
+{% for post in site.posts %}
+  <h3>{{ post.title }}</h3>
+  {{ post.excerpt }}
+  <a class="readmore" href="{{ post.url }}"> Read more ... </a>
+{% endfor %}
+
+
 [TSFS-PAPER-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014.pdf
 [TSFS-SLIDES-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.pdf
 [TSFS-SLIDES-ODP]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.odp
@@ -162,6 +184,7 @@ Posts
 [KVM-CMM]: https://github.com/torvalds/linux/commit/b31288fa83b2bcc8834e1e208e9526b8bd5ce361
 [KVM-PTE]: https://github.com/torvalds/linux/commit/45961722f8e30ceab9d135b1ddc0947d53aef7c3
 
+<!--
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus gravida orci eget pretium. Curabitur eget purus arcu. Mauris eu venenatis mi, eget elementum sem. Sed quam ligula, posuere sagittis congue et, cursus id libero. Fusce luctus mattis enim a congue. Cras ac libero eget tortor mattis scelerisque vel id nulla. Aliquam in cursus enim. Aliquam mi ex, dapibus quis dui sed, semper porta arcu. Aliquam sit amet nisi nec magna vulputate vulputate.
 
 Integer tellus tortor, fringilla in odio viverra, commodo sollicitudin mi. Aenean et bibendum velit. Sed efficitur elit non consectetur imperdiet. Aenean non consequat erat, eget congue erat. Fusce ornare elit id sapien fringilla vehicula. Ut augue mi, accumsan sit amet risus quis, tincidunt lacinia leo. Aliquam pellentesque elit ac mi bibendum, ut tincidunt nulla dignissim. Cras rhoncus nibh suscipit, euismod justo id, tempus mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
@@ -182,3 +205,4 @@ Donec cursus elit a risus porttitor auctor. Phasellus dignissim sollicitudin mi 
 
 Integer non interdum purus. In a lorem id mauris suscipit scelerisque quis et eros. Ut est enim, eleifend ut nulla pellentesque, ornare sagittis eros. Etiam non nibh id purus malesuada sagittis a vitae turpis. Cras vel ligula aliquam, aliquam sem in, molestie nibh. Curabitur in efficitur lacus, nec dapibus ante. Nunc eu malesuada lacus. Donec molestie cursus suscipit. Morbi arcu lectus, elementum sed metus vel, congue porta augue. Integer leo diam, pretium in molestie et, condimentum eu elit. Pellentesque pulvinar luctus vestibulum.
 
+-->

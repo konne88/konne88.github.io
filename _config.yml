@@ -1,6 +1,6 @@
-themeurl: theme
-logourl: profile.png
-iconurl: icon.png 
+themeurl: /theme
+logourl: /profile.png
+iconurl: /icon.png 
 
 layouts: ./theme/_layouts
 markdown: kramdown
