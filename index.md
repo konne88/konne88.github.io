@@ -136,13 +136,11 @@ Publications
             [Slides (PDF)][TSFS-SLIDES-PDF], 
             [Slides (ODP)][TSFS-SLIDES-ODP]
  
-> "A format string checker for Java"
+> "A format string checker for Java" (Demo Paper)
   by Konstantin Weitz, Siwakorn Srisakaokul, Gene Kim, and Michael D. Ernst.
   *In ISSTA 2014.* <br/>
 > Download: [Paper (PDF)][TSFS-DEMO-PDF], 
-            [BibTeX Entry][TSFS-DEMO-BIB],
-            [Slides (PDF)][TSFS-SLIDES-PDF], 
-            [Slides (ODP)][TSFS-SLIDES-ODP]
+            [BibTeX Entry][TSFS-DEMO-BIB].
  
 > "Real-Time Collaborative Analysis with (Almost) Pure SQL: A Case Study in Biogeochemical Oceanography"
   by Daniel Halperin, Francois Ribalet, Konstantin Weitz, Mak A. Saito, Bill Howe, and E. Virginia Armbrust.
