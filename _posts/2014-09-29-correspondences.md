@@ -108,6 +108,7 @@ implementations.
 [CARDINAL]: http://en.wikipedia.org/wiki/Cardinal_number
 [CHRIS]: http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/
 
+<br/><br/>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
