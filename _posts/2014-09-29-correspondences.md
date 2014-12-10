@@ -52,8 +52,8 @@ $$ S(n) $$:          [successor][SUCC],
 $$ \vert S \vert $$: [cardinality][CARD], and
 $$ [0,n] $$:         [interval][INTV].
 
-There are a couple of holes in the table. Most are straigt forward to fill in,
-they just don't seem to have a decidicated symbol. The hole in
+There are a couple of holes in the table. Most are straight forward to fill in,
+they just don't seem to have a dedicated symbol. The hole in
 the natural numbers can be filled in with $$\aleph_0$$ if we consider the 
 [cardinal numbers][CARDINAL].
 
@@ -64,7 +64,7 @@ and to apply them to another one. In a proof assistant like Coq, we might be
 able to take a powerful tactic like `omega`, and apply it to reasoning about the
 size of sets.
 
-It also allows us to decifer semingly arbitrary overloading of mathematical
+It also allows us to decipher seemingly arbitrary overloading of mathematical
 operators. For a long time I, for example, didn't understand why
 mathematicians decided to use $$\cdot$$ to mean $$\wedge$$.
 
