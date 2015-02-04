@@ -18,7 +18,7 @@ info: <div id="description" class="description">
         primarily Program Verification.
       </div>
       <div class="buttons">
-        <button type="button" class="btn btn-default" onclick="download('resume.pdf')">Download Resume</button>
+        <button type="button" class="btn btn-default" onclick="download('assets/resume.pdf')">Download Resume</button>
       </div>
 ---
 
@@ -28,8 +28,8 @@ Open Source Projects
 ### Dataflow Analysis for Google error-prone
 
 <div class="moving-image">
-  <img class="fg" src="projects/ep-fg.png"></img>
-  <img class="bg" src="projects/ep-bg.png"></img>
+  <img class="fg" src="assets/project-icons/ep-fg.png"></img>
+  <img class="bg" src="assets/project-icons/ep-bg.png"></img>
 </div>
 
 [Error­-prone][EP-LINK] is a Java compiler extension that is used in Google's
@@ -62,8 +62,8 @@ Some of the code is open source. See for example
 ### A Type System for Format Strings
 
 <div class="moving-image">
-  <img class="fg" src="projects/cf-fg.png"></img>
-  <img class="bg" src="projects/cf-bg.png"></img>
+  <img class="fg" src="assets/project-icons/cf-fg.png"></img>
+  <img class="bg" src="assets/project-icons/cf-bg.png"></img>
 </div>
 
 Most programming languages support format strings, but their use is error-prone.
@@ -93,8 +93,8 @@ Download: [Paper (PDF)][TSFS-PAPER-PDF],
 ### Hardware Assisted Resource Overcommitment for the Linux KVM on System Z
 
 <div class="moving-image">
-  <img class="fg" src="projects/kvm-fg.png"></img>
-  <img class="bg" src="projects/kvm-bg.png"></img>
+  <img class="fg" src="assets/project-icons/kvm-fg.png"></img>
+  <img class="bg" src="assets/project-icons/kvm-bg.png"></img>
 </div>
 
 One important advantage of virtualizing a computer’s physical resources is that
@@ -164,12 +164,12 @@ Posts
 [TSFS-SLIDES-ODP]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.odp
 [TSFS-DEMO-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-demo.pdf
 [TSFS-IMPL]: http://types.cs.washington.edu/checker-framework/current/checkers-manual.html#formatter-checker
-[TSFS-BIB]: papers/tsfs.bib
-[TSFS-DEMO-BIB]: papers/tsfs-demo.bib
+[TSFS-BIB]: assets/bibtex/tsfs.bib
+[TSFS-DEMO-BIB]: assets/bibtex/tsfs-demo.bib
 
 [OCEAN-PAPER-PDF]: http://homes.cs.washington.edu/~dhalperi/pubs/halperin_2013_ssdbm_geomics_case_study.pdf
 [OCEAN-TALK]: http://research.microsoft.com/apps/video/default.aspx?id=200713
-[OCEAN-BIB]: papers/ocean.bib
+[OCEAN-BIB]: assets/bibtex/ocean.bib
 
 [EP-LINK]: https://code.google.com/p/error-prone/
 [EP-CASE]: https://code.google.com/p/checker-framework/source/detail?r=4b4210dad872d2a30962d6cb653855bdeae7a922
@@ -181,26 +181,3 @@ Posts
 [KVM-DIAG9C]: https://github.com/torvalds/linux/commit/41628d334361670d825fb03c04568f5ef9f084dc
 [KVM-CMM]: https://github.com/torvalds/linux/commit/b31288fa83b2bcc8834e1e208e9526b8bd5ce361
 [KVM-PTE]: https://github.com/torvalds/linux/commit/45961722f8e30ceab9d135b1ddc0947d53aef7c3
-
-<!--
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus gravida orci eget pretium. Curabitur eget purus arcu. Mauris eu venenatis mi, eget elementum sem. Sed quam ligula, posuere sagittis congue et, cursus id libero. Fusce luctus mattis enim a congue. Cras ac libero eget tortor mattis scelerisque vel id nulla. Aliquam in cursus enim. Aliquam mi ex, dapibus quis dui sed, semper porta arcu. Aliquam sit amet nisi nec magna vulputate vulputate.
-
-Integer tellus tortor, fringilla in odio viverra, commodo sollicitudin mi. Aenean et bibendum velit. Sed efficitur elit non consectetur imperdiet. Aenean non consequat erat, eget congue erat. Fusce ornare elit id sapien fringilla vehicula. Ut augue mi, accumsan sit amet risus quis, tincidunt lacinia leo. Aliquam pellentesque elit ac mi bibendum, ut tincidunt nulla dignissim. Cras rhoncus nibh suscipit, euismod justo id, tempus mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-
-Quisque facilisis, ligula eget consectetur maximus, turpis nulla dapibus quam, vel lobortis ante lorem in eros. Suspendisse et erat nisi. Donec pretium pellentesque fringilla. Donec sollicitudin sed velit a malesuada. Proin efficitur rutrum tincidunt. Donec ornare ipsum nisl, nec mattis ipsum consequat id. Integer mollis leo quis viverra congue. Mauris sodales enim nec libero sagittis, eu elementum nisi faucibus. Nullam sit amet nunc in quam aliquam tincidunt at eget est. Pellentesque dignissim libero vel eros consequat, vitae rutrum nisl scelerisque. Phasellus id cursus quam, ut convallis tellus. Morbi aliquet tempor vehicula. Ut at iaculis mauris. Sed aliquet non lectus sit amet ornare. Integer fringilla mauris id quam vulputate, nec tincidunt lectus aliquam. Cras nec lorem commodo, fermentum sem at, luctus turpis.
-
-Nullam ex erat, efficitur eu massa in, mattis vehicula lacus. In sit amet placerat nulla. Donec sit amet leo id enim ornare vehicula at vitae purus. Maecenas lobortis eget turpis eget molestie. Mauris rutrum accumsan purus, eu iaculis justo dictum vel. Sed a justo non nisi lobortis lacinia sit amet a nibh. In aliquam dolor vel suscipit vulputate. Integer gravida diam vel fringilla finibus. Sed ullamcorper purus sem, in fermentum ligula feugiat vitae. Quisque mattis ornare ipsum ullamcorper aliquet. Mauris convallis urna sed nisl vulputate, ac gravida lorem tempor.
-
-Etiam malesuada lectus non est bibendum, non vestibulum nibh faucibus. Curabitur augue est, bibendum eu consectetur bibendum, molestie sit amet nulla. Fusce vel mi quis mi mattis euismod et vitae ex. Quisque quis nisi id elit scelerisque egestas. Sed nisi eros, vestibulum vel ipsum vitae, pretium feugiat ex. Donec iaculis suscipit odio quis feugiat. Morbi molestie laoreet tortor, in vulputate purus ullamcorper sed. Donec non metus quam.
-
-Sed ac nunc vel mi tempor venenatis vitae a nulla. Duis posuere dolor a ante vehicula rutrum. Nunc porta risus nunc, ut aliquet augue pharetra ut. Nam augue nisi, consequat at mi quis, venenatis finibus urna. Morbi posuere vulputate enim ac rutrum. Proin et viverra augue. Sed ac felis eget neque dignissim interdum vitae in metus. Etiam vel est eget magna gravida venenatis at sit amet tortor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer lacinia nulla lacinia ligula porta, eu pretium est aliquam. Maecenas sit amet cursus eros. Etiam sed suscipit tortor. Duis vestibulum in urna in mollis. Vivamus lacinia sed purus non faucibus. Nullam eget elit semper orci feugiat scelerisque eget vel turpis.
-
-Pellentesque lobortis sem nisi, nec luctus lorem lacinia a. Nulla facilisi. Proin elementum, diam in pellentesque porttitor, erat nunc imperdiet urna, vel ultricies nulla nisl et diam. Ut pretium placerat arcu, ac euismod purus scelerisque eu. Curabitur volutpat aliquam lacus sit amet suscipit. In fermentum orci eget nisl cursus ornare. Etiam hendrerit sem et justo rutrum sollicitudin. Pellentesque velit est, pulvinar nec mollis sed, blandit vitae risus. In velit eros, consequat sit amet faucibus nec, malesuada id dolor. Curabitur interdum, orci nec interdum tincidunt, tellus ex fermentum felis, non dictum elit tellus sollicitudin lorem. Cras hendrerit quam nec nisl semper pellentesque. Aenean nec purus risus. Nullam dictum enim nec porta gravida. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vel vulputate dolor, at facilisis lectus.
-
-Cras euismod rutrum purus, quis fermentum arcu fermentum feugiat. Integer a rutrum nisl, a tempus sapien. Quisque eros ipsum, fermentum ac mauris nec, porttitor vulputate nisl. Aliquam porta justo non ante tempor, a porttitor tortor viverra. Aenean gravida dapibus ligula vel consectetur. Aliquam eleifend purus mauris, sit amet vehicula ligula convallis at. Sed nulla purus, tempor id facilisis eget, dapibus quis augue. Duis ut libero nisl. Curabitur et ipsum sed lectus pharetra lobortis sed a quam. Vivamus dignissim egestas elit, vel suscipit neque semper id. Phasellus congue elit sed leo molestie pretium. Fusce laoreet sollicitudin augue et ultrices. Vivamus tempor condimentum tincidunt. Donec consectetur bibendum dapibus. In ac dui mattis, sollicitudin purus et, accumsan est.
-
-Donec cursus elit a risus porttitor auctor. Phasellus dignissim sollicitudin mi sit amet venenatis. Donec varius lectus id euismod gravida. Donec suscipit elementum ipsum, quis congue odio fermentum nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus mollis consequat metus, sed tristique lacus finibus vitae. Duis porta mi magna, quis maximus ipsum dignissim ut. Cras ac blandit lorem, at volutpat nisi. Sed venenatis non lacus ut congue.
-
-Integer non interdum purus. In a lorem id mauris suscipit scelerisque quis et eros. Ut est enim, eleifend ut nulla pellentesque, ornare sagittis eros. Etiam non nibh id purus malesuada sagittis a vitae turpis. Cras vel ligula aliquam, aliquam sem in, molestie nibh. Curabitur in efficitur lacus, nec dapibus ante. Nunc eu malesuada lacus. Donec molestie cursus suscipit. Morbi arcu lectus, elementum sed metus vel, congue porta augue. Integer leo diam, pretium in molestie et, condimentum eu elit. Pellentesque pulvinar luctus vestibulum.
-
--->
