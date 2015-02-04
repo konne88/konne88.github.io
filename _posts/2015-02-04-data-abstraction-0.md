@@ -26,7 +26,7 @@ Some functions require additional parameters to _operate on_ (create, observe, c
     Definition min A (le:A->A->bool) (a b:A) :=
       if le a b then a else b.
 
-Frequently used operations are packaged with their type variable using an _existential type_ --- such a package is called Abstract Data Type (ADT) (thus the name of [Bob Harper's blog][BHB]. For example:
+Frequently used operations are packaged with their type variable using an _existential type_ --- such a package is called Abstract Data Type (ADT). Thus the name of [Bob Harper's blog][BHB]. For example:
 
     Record Order := {
       A  : Type;
@@ -53,7 +53,7 @@ Frequently used operations are packaged with their type variable using an _exist
       _   : forall a b c, add (add a b) c = add a (add b c)
     }.
 
-A function can require an ADT, instead of a type variable and additional parameters, to operate on values with hidden representations.  For example:
+Instead of a type variable and additional parameters, a function can require an ADT to operate on values with hidden representations.  For example:
 
     Definition min (o:Order) (a b:A o) : A o :=
       if le o a b then a else b.
@@ -96,11 +96,9 @@ In a language with _procedural abstraction_ (the inability to inspect function i
 
     Definition contains (n:nat) (s:nat -> bool) := s n.
 
-The type of a function that hides a value's representation is called an _interface_. In the above example, the function `s` implements the interface:
+The type of a function that hides a value's representation is called an _interface_. In the above example, the function `s` implements the `IntSet`interface, which consists of one method that tests whether the set contains a certain element.
 
     Definition IntSet := nat -> bool.
-
-The `IntSet` interface consists of one method, that tests whether the set contains a certain element. 
 
 An interface's implementation is called an _object_. For example:
 
@@ -119,7 +117,7 @@ Functions that create objects are called _constructors_. For example:
     
     Definition treeSet (t:Tree) : IntSet := fun n => search n t.
 
-The following example shows how to implements the set $\{1,3,4,6,9,11\}$ using both the `listSet` and `treeSet` constructor:
+The following example shows how to implements the set $$\{1,3,4,6,9,11\}$$ using both the `listSet` and `treeSet` constructor:
 
     Definition someListSet : IntSet := listSet [1;3;4;6;9;11].
     
@@ -131,7 +129,7 @@ The following example shows how to implements the set $\{1,3,4,6,9,11\}$ using b
         (node 9 leaf
           (node 11 leaf leaf))).
 
-The `IntSet` interface hides the implementation of an object. The above objects are therefore indistinguishable:
+The `IntSet` interface hides the implementation of an object. The `someListSet` and `someTreeSet` are therefore indistinguishable:
 
     Goal someListSet = someTreeSet. 
       apply functional_extensionality.
@@ -139,7 +137,7 @@ The `IntSet` interface hides the implementation of an object. The above objects 
       do 12 (destruct n; auto).
     Qed. 
 
-There is no universally accepted definition of _Object Oriented Programming_, but I believe that its essence is captured by the above definitions of interface, object, and constructor.
+There is no universally accepted definition of _Object Oriented Programming_, but the above definitions of interface, object, and constructor capture the essence of OOP (in my opinion).
 
 [Cook][COOK], and to some extend [Odersky][ODERSKY-TALK] (see [slide 4][ODERSKY-SLIDES]), motivate this definition of OOP, and show how to implement other common OOP constructs with it.
 
@@ -205,7 +203,7 @@ The above examples can be implemented in Java as follows (constructors are imple
       }
     }
 
-The example interfaces so far only contain operations to observe an object. ADTs also provide operations to create, combine, and reason about values. Can interfaces be extended to include these operations? Consider the following example:
+The example interfaces so far only contain operations to observe an object. ADTs also provide operations to create, combine, and reason about values. Can interfaces be extended to include these operations? The answer is _no_. Consider the following example:
 
     Inductive IntSetMethod := contains | isEmpty | isEmptyOk | empty | union.
 
@@ -222,20 +220,20 @@ The example interfaces so far only contain operations to observe an object. ADTs
     - (* Cannot refer to type:   IntSet *) admit.
     Abort. 
 
-Adding the observation operation `isEmpty` is successful. Adding the operation `isEmptyOk` to reason about `isEmtpy` fails, as we cannot refer to the current object (`this`). Adding operations to create (`empty`) and combine (`union`)objects fails, as we cannot refer to the interface `IntSet` that is currently being defined. Using `Fixpoint` instead of `Definition` to make `IntSet` self-referential fails, as there is no value to induct on.
+Adding the observation operation `isEmpty` is successful. Adding the operation `isEmptyOk` to reason about `isEmtpy` fails, as we cannot refer to the current object (`this`). Adding operations to create (`empty`) and combine (`union`) objects fails, as we cannot refer to the interface `IntSet` that is currently being defined. Using `Fixpoint` instead of `Definition` to make `IntSet` self-referential fails, as there is no value to induct on.
 
-Thus, the answer is _no_: we cannot extend interfaces with these operations. Instead, operations to create and combine objects can be defined as constructors. For example:
+Instead of extending the interface, operations to create and combine objects can be defined as constructors. For example:
 
     Definition union (s:IntSet) (t:IntSet) : IntSet :=
       fun n => s n || t n.
 
-One can reasoning about these constructors by unfolding their definitions. I do not see a good way to reason about operations that observe an object.
+One can reasoning about these constructors by unfolding their definitions. Reasoning about operations that observe an object appears to be impossible.
 
 ### Coming Next
 
 In this post, I have defined OOP in its purest form. I the next post, I will explore the consequences of adding more structure to interfaces (for example, defining an interface to be a record of methods).
 
-There are limitations to ADTs and OOP. For example, performance concerns can bloat the number of operations (e.g. `batchInsert`), or limit the flexibility of an ADT/interface. In the next post, I will describe these limitations, and explore alternatives like domain specific languages, compilers, and synthesis (e.g. [FIAT][ADT-SYN-PAPER]) which decompose functionality & optimizations instead of data structures & algorithms.
+There are limitations to ADTs and OOP. For example, performance concerns can bloat the number of operations (e.g. `batchInsert`), or limit the flexibility of an ADT/interface. In the next post, I will describe these limitations, and explore alternatives such as: domain specific languages, compilers, and synthesis (e.g. [FIAT][ADT-SYN-PAPER]) which decompose functionality & optimizations instead of data structures & algorithms.
 
 [TAPL]: http://www.cis.upenn.edu/~bcpierce/tapl
 [POLY]: https://en.wikipedia.org/wiki/Parametric_polymorphism
