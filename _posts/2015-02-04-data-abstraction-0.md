@@ -244,3 +244,16 @@ There are limitations to ADTs and OOP. For example, performance concerns can blo
 [COQ]:  {{ site.url }}/assets/posts/data-abstraction/data-abstraction.v
 [JAVA]: {{ site.url }}/assets/posts/data-abstraction/data-abstraction.java
 [HASK]: {{ site.url }}/assets/posts/data-abstraction/data-abstraction.hs
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'konne'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
