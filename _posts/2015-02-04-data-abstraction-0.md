@@ -26,7 +26,7 @@ Some functions require additional parameters to _operate on_ (create, observe, c
     Definition min A (le:A->A->bool) (a b:A) :=
       if le a b then a else b.
 
-Frequently used operations are packaged with their type variable using an _existential type_ --- such a package is called Abstract Data Type (ADT). Thus the name of [Bob Harper's blog][BHB]. For example:
+Frequently used operations are packaged with their type variable using an _existential type_ --- such a package is called Abstract Data Type (ADT). For example:
 
     Record Order := {
       A  : Type;
@@ -137,9 +137,7 @@ The `IntSet` interface hides the implementation of an object. The `someListSet` 
       do 12 (destruct n; auto).
     Qed. 
 
-There is no universally accepted definition of _Object Oriented Programming_, but the above definitions of interface, object, and constructor capture the essence of OOP (in my opinion).
-
-[Cook][COOK], and to some extend [Odersky][ODERSKY-TALK] (see [slide 4][ODERSKY-SLIDES]), motivate this definition of OOP, and show how to implement other common OOP constructs with it.
+There is no universally accepted definition of _Object Oriented Programming_, but the above definitions of interface, object, and constructor capture the essence of OOP (in my opinion). [Cook][COOK], and to some extend [Odersky][ODERSKY-TALK] (see [slide 4][ODERSKY-SLIDES]), motivate this definition of OOP, and show how to implement other common OOP constructs with it.
 
 An interface might require multiple methods. This can be encoded with an extra parameter that selects the method. For example, a pair can be defined as:
 
@@ -227,7 +225,7 @@ Instead of extending the interface, operations to create and combine objects can
     Definition union (s:IntSet) (t:IntSet) : IntSet :=
       fun n => s n || t n.
 
-One can reasoning about these constructors by unfolding their definitions. Reasoning about operations that observe an object appears to be impossible.
+One can reasoning about these constructors by unfolding their definitions. Reasoning about operations that observe an object (e.g. `isEmpty`) appears to be impossible.
 
 ### Coming Next
 
@@ -238,7 +236,6 @@ There are limitations to ADTs and OOP. For example, performance concerns can blo
 [TAPL]: http://www.cis.upenn.edu/~bcpierce/tapl
 [POLY]: https://en.wikipedia.org/wiki/Parametric_polymorphism
 [PARA]: https://en.wikipedia.org/wiki/Parametricity 
-[BHB]: https://existentialtype.wordpress.com/
 [COOK]: http://dl.acm.org/citation.cfm?id=1640133
 [ODERSKY-SLIDES]: http://www.slideshare.net/Typesafe/scaladays-keynote
 [ODERSKY-TALK]: https://www.youtube.com/watch?v=iPitDNUNyR0
