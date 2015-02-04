@@ -12,7 +12,7 @@ Abstract Data Types and Object Oriented Programming in Coq (Part I)
 
 This post describes how to use data abstractions, specifically Abstract Data Types (ADTs) and Object Oriented Programming (OOP), to hide a value's representation in a functional programming language with dependent types.
 <!--more-->
-Many of the ideas in this post are based on [TaPL, Chapter 24.2 and 32][TAPL] and [Cook][COOK]. You can download the [Coq][COQ] [Haskell][HASK] and [Java][JAVA] source code of the examples.
+Many of the ideas in this post are based on [TaPL, Chapter 24.2 and 32][TAPL] and [Cook][COOK]. You can download the source code of the examples in [Coq][COQ], [Haskell][HASK], and [Java][JAVA].
 
 ### Abstract Data Types
 
@@ -246,6 +246,6 @@ There are limitations to ADTs and OOP. For example, performance concerns can blo
 [ODERSKY-TALK]: https://www.youtube.com/watch?v=iPitDNUNyR0
 [ADT-SYN-PAPER]: https://people.csail.mit.edu/jgross/personal-website/papers/2015-adt-synthesis.pdf
 
-[COQ]:  assets/posts/data-abstraction/data-abstraction.v
-[JAVA]: assets/posts/data-abstraction/data-abstraction.java
-[HASK]: assets/posts/data-abstraction/data-abstraction.hs
+[COQ]:  {{ site.url }}/assets/posts/data-abstraction/data-abstraction.v
+[JAVA]: {{ site.url }}/assets/posts/data-abstraction/data-abstraction.java
+[HASK]: {{ site.url }}/assets/posts/data-abstraction/data-abstraction.hs
