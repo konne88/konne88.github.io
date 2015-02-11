@@ -7,29 +7,23 @@ title: Konstantin Weitz
 info:
 ---
 
-The Natural Number, Type, Set, and Proposition Correspondence
--------------------------------------------------------------
+Connections between Natural Numbers, Types, Sets, and Propositions
+------------------------------------------------------------------
 
-In this post, I'm showing connections between natural numbers, types, sets and
-propositions. This is similar to the [Curry Howard correspondence][CURRY] which 
-shows a connection between functional programming languages and propositions, or 
-[Chris Taylor's blog post][CHRIS] which explains how the natural numbers are 
-connected to Haskell types.
+This post shows connections between natural numbers, types, sets and propositions. This post draws ideas from the [Curry Howard correspondence][CURRY] which shows a connection between functional programs and mathematical proofs, and [Chris Taylor's blog post][CHRIS] which shows a connection between natural numbers and Haskell types.
 
 <!--more-->
 
-Let us define that a natural number $$n$$ is related to a
+Intuitively, we will say that a natural number $$n$$ is _related_ to the type, set, or proposition $$a$$ if and only if the "size" of $$a$$ is equal to $$n$$. More formally, a natural number $$n$$ is related to:
 
-- type $$T$$ iff $$ n = \text{number of terms inhabiting } T $$
-- set $$S$$ iff $$ n = \vert S \vert $$
-- proposition $$P$$ iff $$ n > 0 \iff P $$
+- _Type_ $$T$$        iff $$ n = \text{number of terms inhabiting } T $$
+- _Set_ $$S$$         iff $$ n = \vert S \vert $$
+- _Proposition_ $$P$$ iff $$ n > 0 \iff P $$
 
-In the following table, the natural number of each row is related to 
-all other cells in the row (assuming the inputs $$A$$, $$B$$, ... are related).
+The following table shows related natural numbers, types, sets, and propositions. The natural number in the leftmost cell of each row is related to all other cells in the row, assuming that the inputs $$A$$, $$B$$, and $$S_a$$ are already related.
 
-Consider for example the 5th row.
-For the arbitrary natural number $$A=3$$, and the related type `data A = a | b | c`,
-$$ S(3) $$ is related to `Maybe A`.
+Consider for example the two leftmost cells in the 5th row, and assume that $$A=3$$ and `data A = a | b | c`. 
+$$A$$ and `A` are related, because `A` is inhabited by the $$3$$ terms: `a`, `b`, and `c`. Therefore, the table shows that $$S(A)$$ and `Maybe A` are related as well. This is indeed the case, because `A` is inhabited by the $$4$$ terms: `Just a`, `Just b`, `Just c`, and `Nothing`.
 
 Natural Number              | Type           | Set                        | Proposition
 ----------------------------|----------------|----------------------------|------------------
@@ -49,8 +43,10 @@ $$ \times $$:        [cartesian product][CROSS],
 $$ \uplus $$:        [disjoint union][UPLUS],
 $$ \{ a \} $$:       [singleton][SINGL],
 $$ S(n) $$:          [successor][SUCC],
-$$ \vert S \vert $$: [cardinality][CARD], and
-$$ [0,n] $$:         [interval][INTV].
+$$ \vert S \vert $$: [cardinality][CARD],
+$$ [0,n] $$:         [interval][INTV], and
+`(a:A) -> S a`:      [dependent function][DEP]
+.
 
 There are a couple of holes in the table. Most are straight forward to fill in,
 they just don't seem to have a dedicated symbol. The hole in
@@ -107,6 +103,7 @@ implementations.
 [ORDINAL]: http://en.wikipedia.org/wiki/Ordinal_number
 [CARDINAL]: http://en.wikipedia.org/wiki/Cardinal_number
 [CHRIS]: http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/
+[DEP]: http://en.wikipedia.org/wiki/Dependent_type
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
