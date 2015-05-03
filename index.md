@@ -28,7 +28,7 @@ Open Source Projects
 ### Bagpipe: BGP Policy Verification
 
 <div class="moving-image">
-  <img class="fg" src="assets/project-icons/bagpipe-fg.png"></img>
+  <img class="fg moving" src="assets/project-icons/bagpipe-fg.png"></img>
   <img class="bg" src="assets/project-icons/bagpipe-bg.png"></img>
 </div>
 
@@ -46,7 +46,7 @@ Bagpipe is a tool which enables an ISP to express its BGP policy in a domain-spe
 
 <div class="moving-image">
   <img class="fg" src="assets/project-icons/ep-fg.png"></img>
-  <img class="bg" src="assets/project-icons/ep-bg.png"></img>
+  <img class="bg moving" src="assets/project-icons/ep-bg.png"></img>
 </div>
 
 [Error­-prone][EP-LINK] is a Java compiler extension that is used in Google's
@@ -80,7 +80,7 @@ Some of the code is open source. See for example
 
 <div class="moving-image">
   <img class="fg" src="assets/project-icons/cf-fg.png"></img>
-  <img class="bg" src="assets/project-icons/cf-bg.png"></img>
+  <img class="bg moving" src="assets/project-icons/cf-bg.png"></img>
 </div>
 
 Most programming languages support format strings, but their use is error-prone.
@@ -111,7 +111,7 @@ Download: [Paper (PDF)][TSFS-PAPER-PDF],
 
 <div class="moving-image">
   <img class="fg" src="assets/project-icons/kvm-fg.png"></img>
-  <img class="bg" src="assets/project-icons/kvm-bg.png"></img>
+  <img class="bg moving" src="assets/project-icons/kvm-bg.png"></img>
 </div>
 
 One important advantage of virtualizing a computer’s physical resources is that
