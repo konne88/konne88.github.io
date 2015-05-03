@@ -28,6 +28,7 @@ Open Source Projects
 ### Bagpipe: BGP Policy Verification
 
 <div class="moving-image">
+  <img src="assets/project-icons/shading.png"></img>
   <img class="fg moving" src="assets/project-icons/bagpipe-fg.png"></img>
   <img class="bg" src="assets/project-icons/bagpipe-bg.png"></img>
 </div>
@@ -45,6 +46,7 @@ Bagpipe is a tool which enables an ISP to express its BGP policy in a domain-spe
 ### Dataflow Analysis for Google error-prone
 
 <div class="moving-image">
+  <img src="assets/project-icons/shading.png"></img>
   <img class="fg" src="assets/project-icons/ep-fg.png"></img>
   <img class="bg moving" src="assets/project-icons/ep-bg.png"></img>
 </div>
@@ -79,6 +81,7 @@ Some of the code is open source. See for example
 ### A Type System for Format Strings
 
 <div class="moving-image">
+  <img src="assets/project-icons/shading.png"></img>
   <img class="fg" src="assets/project-icons/cf-fg.png"></img>
   <img class="bg moving" src="assets/project-icons/cf-bg.png"></img>
 </div>
@@ -110,6 +113,7 @@ Download: [Paper (PDF)][TSFS-PAPER-PDF],
 ### Hardware Assisted Resource Overcommitment for the Linux KVM on System Z
 
 <div class="moving-image">
+  <img src="assets/project-icons/shading.png"></img>
   <img class="fg" src="assets/project-icons/kvm-fg.png"></img>
   <img class="bg moving" src="assets/project-icons/kvm-bg.png"></img>
 </div>
