@@ -37,6 +37,9 @@ Internet Service Providers (ISPs) rely on the Border Gateway Protocol (BGP) to e
 
 Bagpipe is a tool which enables an ISP to express its BGP policy in a domain-specific specification language and verify that its router configurations implement this policy. We evaluated Bagpipe on Internet2 and Selfnet, two ISPs with a combined total of over 100,000 lines of router configuration. We identified and expressed policies for these ISPs, and found 19 inconsistencies between the policies and the router configurations without issuing any false positives.
 
+For more information, visit the [bagpipe website][BAGP].
+
+[BAGP]: http://konne.me/bagpipe
 [BGP-YT]: http://research.dyn.com/2008/02/pakistan-hijacks-youtube-1/ 
 [BGP-CT10]: http://research.dyn.com/2010/11/chinas-18-minute-mystery/
 [BGP-CT14]: http://research.dyn.com/2014/11/chinese-routing-errors-redirect-russian-traffic/
