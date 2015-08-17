@@ -14,11 +14,11 @@ This post provides formal proofs of three paradoxes that occur in type systems w
 <!--more-->
 The [source code of the paradoxes][SRC] is available for download.
 
-An important aspect of type theory is identifying the _values_ of a given _type_. For example: the values of type $\mathbb{N}$ are the natural numbers $0, 1, 2, \dots$; the values of type $\text{bool}$ are $\text{true}$ and $\text{false}$. This blog post explains ways in which many languages add spurious values to types. In Java, for example, there are at least 3 values of type `boolean`.
+An important aspect of type theory is identifying the _values_ of a given _type_. For example: the values of type $$\mathbb{N}$$ are the natural numbers $$0, 1, 2, \dots$$; the values of type $$\text{bool}$$ are $$\text{true}$$ and $$\text{false}$$. This blog post explains ways in which many languages add spurious values to types. In Java, for example, there are at least 3 values of type `boolean`.
 
 A type system that avoids spurious values has several advantages. For example:
 
-1) A type system can provide guarantees about a program. For example, a type system can guarantee that the function \text{square}(n : \mathbb{N}) := n^2$ is only ever invoked with a natural number (not e.g. a string) and thus that $n^2$ will never fail. Spurious values can break these guarantees.
+1) A type system can provide guarantees about a program. For example, a type system can guarantee that the function $$\text{square}(n : \mathbb{N}) := n^2$$ is only ever invoked with a natural number (not e.g. a string) and thus that $$n^2$$ will never fail. Spurious values can break these guarantees.
 
 2) A type system can enable mathematical reasoning using the [Curry-Howard
 Correspondence][CH]. Using this correspondence, true propositions are
