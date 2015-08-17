@@ -114,7 +114,7 @@ Such an ordering is necessarily irreflexive.
       apply (noChains (fun _ => a) (fun _ => h)).
     Qed. 
 
-![](IRR)
+![][IRR]
 
 All the paradoxes we have seen so far are based on recursion. It should come to nobodies surprise that this paradox will go the same way. Therefore, we now define the _ordering of orderings_. 
 
