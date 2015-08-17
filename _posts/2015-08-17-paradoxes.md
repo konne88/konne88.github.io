@@ -36,6 +36,10 @@ Most programming languages allow some form of unrestricted recursion or loops, w
       return f();
     }
 
+Every typed mainstream programming language has this problem (including Haskell and ML). While this seems bad, it's not quite as bad as you might expect initially. In Java, function `g` that takes a `boolean` is still guaranteed to only every be invoked with a value that is either `true` or `false` (unless Java is broken in some other way). The reason is that `g(f())` never actually calls the function `g`, because `f` never stops executing.
+
+If you want to use Java's type system for mathematical reasoning though, you will be pleased to hear (sarcasm) that every single proposition will be true, because there is a value in every type.
+
 Languages can avoid these kinds of spurious values/paradoxes, for example by using using [inductive data types][CIC] and [eliminators][QMB] instead of unrestricted recursion.
 
 ![][PAR]
@@ -59,6 +63,8 @@ Languages can avoid these kinds of spurious values/paradoxes by restricting the 
 ### Type in Type
 
 Most typed languages allow functions that take terms as arguments, for example `not (b:bool) := if b then false else true`. More advanced type system also allow functions that take types are arguments, for example `id (A:Type) (a:A) := a`. In such languages, the question arises what the type of `Type` should be. Initial suggestions were for `Type` to be of type `Type`, i.e. `Type : Type`, until Girard proved that this is paradoxical. The following proof is based on Per Martin-Löf's proof of Girard's paradox in [An Intuitionistic Theory of Types, 1972][ITT].
+
+Note that this problem only arises in languages with fairly complex type systems. Many languages simply do not allow a programmer to ask for the type of `Type`. In Java for example, the function `static <A> A id(A a) { return a; }` takes the type `A` as argument, but because there is the special syntax `<A>` Java gets away without having to type the expression `Type`.
 
 This proof 
 will define a notion of ordering, 
@@ -96,7 +102,7 @@ Yet, it is impossible to create an _infinite descending chain_ of the natural nu
 
 ![][DSC]
 
-We define an ordering as a set together with a "less than" relation that is transitive and contains no infinite descending chains (note that the ordering is not required to be total).
+We define an ordering as a set together with a "less than" relation that is transitive and contains no infinite descending chains (note that the ordering is not required to be total). Note that `ordering` could be defined using existentials instead of a record.
 
     Class ordering : Type := {
       set : Type;
@@ -290,6 +296,12 @@ We just showed that the order of orderings is larger than all orderings (includi
 
 The paradox is caused by the self-referential nature of the ordering of orderings. In general, the definition of a type is called _impredicative_ if it involves a quantifier whose domain includes the type currently being defined (see [TaPL, chapter 23][TAPL]). A _predicative_ type system enforces that such self-referential definitions cannot be made. Predicative type system are usually implemented using _stratification_ or _ramification_, where `Type` is indexed by a natural number and `Type n : Type (n + 1)`, e.g. `Type 0 : Type 1 : Type 2`.
 
+Stratification is also the trick that Haskell uses to avoid this paradox (it's not like that matters, given that the other two paradoxes are still possible). Instead of having an infinite hierarchy of types though, Haskell opts for just a finite number of them (the highest being [kinds][KIND]).
+
+### Conclusion
+
+The types of most languages contain spurious values and are thus not useful for mathematical reasoning using the Curry-Howard Correspondence. Languages free of all known paradoxes are for example Coq, Agda, NuPRL, and Lean.
+
 [ASC]: {{ site.url }}/assets/posts/paradoxes/nat-asc.jpg
 [DSC]: {{ site.url }}/assets/posts/paradoxes/nat-dsc.jpg
 [IRR]: {{ site.url }}/assets/posts/paradoxes/irreflexive.jpg
@@ -306,6 +318,7 @@ The paradox is caused by the self-referential nature of the ordering of ordering
 [QMB]: http://www.quora.com/In-type-theory-what-is-an-eliminator-and-what-is-its-opposite
 [TAPL]: https://www.cis.upenn.edu/~bcpierce/tapl/ 
 [CH]: https://en.wikipedia.org/wiki/Curry–Howard_correspondence
+[KIND]: https://wiki.haskell.org/Kind
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
