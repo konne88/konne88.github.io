@@ -7,6 +7,8 @@ title: Konstantin Weitz
 info:
 ---
 
+
+
 3 Shocking Ways to Break Type Systems That Your K-12 Math Teacher Won't Tell You About
 ----------------------------------------------------------------------------
 
@@ -14,7 +16,9 @@ This post provides formal proofs of three paradoxes that occur in type systems w
 <!--more-->
 The [source code of the paradoxes][SRC] is available for download.
 
-An important aspect of type theory is identifying the _values_ of a given _type_. For example: the values of type $$\mathbb{N}$$ are the natural numbers $$0, 1, 2, \dots$$; the values of type $$\text{bool}$$ are $$\text{true}$$ and $$\text{false}$$. This blog post explains ways in which many languages add spurious values to types. In Java, for example, there are at least 3 values of type `boolean`.
+An important aspect of type theory is identifying the _values_ of a given _type_. For example: the values of type $$\mathbb{N}$$ are the natural numbers $$0, 1, 2, \dots$$; the values of type $$\text{bool}$$ are $$\text{true}$$ and $$\text{false}$$. This blog post explains ways in which many languages add spurious values to types. In Java, for example, there are at least 3 values of type `boolean`[^VAL].
+
+[^VAL]: Strictly speaking, type theory is concerned with identifying all the _terms_ of a given type, and then partitioning them into equivalence classes according to their normalization behavior (e.g. `5` and `2 + 3` are equivalent). Thus, Java's `boolean` type contains at least three equivalence classes. The first contains for example `true`, `true || false`, and `if true then true else false`; the second contains `false`, `true && false`, and `if false then true else false`; and the third contains `f()` which normalizes to neither `true` nor `false`.
 
 A type system that avoids spurious values has several advantages. For example:
 
@@ -92,7 +96,7 @@ Yet, it is impossible to create an _infinite descending chain_ of the natural nu
 
 ![][DSC]
 
-We define an ordering as a set together with a "less than" relation that is transitive and contains no infinite descending chains.
+We define an ordering as a set together with a "less than" relation that is transitive and contains no infinite descending chains (note that the ordering is not required to be total).
 
     Class ordering : Type := {
       set : Type;
