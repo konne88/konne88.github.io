@@ -3,7 +3,7 @@ content_type: md
 layout: main
 header_style: max-height:50px;
 click: download('/')
-title: 3 Shocking Ways to Break Type Systems That Your K-12 Math Teacher Won’t Tell You About
+title: Konstantin Weitz
 info:
 ---
 
