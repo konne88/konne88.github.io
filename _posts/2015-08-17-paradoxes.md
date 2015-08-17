@@ -303,6 +303,8 @@ Stratification is also the trick that Haskell uses to avoid this paradox (it's n
 
 The types of most languages contain spurious values and are thus not useful for mathematical reasoning using the Curry-Howard Correspondence. Languages free of all known paradoxes are for example Coq, Agda, NuPRL, and Lean.
 
+<br/>
+<br/>
 #### Footnotes
 
 
