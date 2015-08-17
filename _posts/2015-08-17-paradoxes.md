@@ -20,11 +20,7 @@ A type system that avoids spurious values has several advantages. For example:
 
 1) A type system can provide guarantees about a program. For example, a type system can guarantee that the function $$\text{square}(n : \mathbb{N}) := n^2$$ is only ever invoked with a natural number (not e.g. a string) and thus that $$n^2$$ will never fail. Spurious values can break these guarantees.
 
-2) A type system can enable mathematical reasoning using the [Curry-Howard
-Correspondence][CH]. Using this correspondence, true propositions are
-represented by inhabited types (i.e. at least one value is of the type), and
-false propositions are represented by uninhabited types (i.e. no value is of
-the type). A spurious value in a type intended to be uninhabited (e.g. `False`), leads to a true proposition that was intended to be false --- a paradox.
+2) A type system can enable mathematical reasoning using the [Curry-Howard Correspondence][CH]. Using this correspondence, true propositions are represented by inhabited types (i.e. at least one value is of the type), and false propositions are represented by uninhabited types (i.e. no value is of the type). A spurious value in a type intended to be uninhabited (e.g. `False`), leads to a true proposition that was intended to be false --- a paradox.
 
 The examples of spurious values in this blog post are based on divergence, and are thus mostly interesting for mathematical reasoning (the second advantage).
 
@@ -58,14 +54,13 @@ Languages can avoid these kinds of spurious values/paradoxes by restricting the 
 
 ### Type in Type
 
-Most typed languages allow functions that take terms as arguments, for example, `not (b:bool) := if b then false else true`. More advanced type system also allow functions that take types are arguments, for example `id (A:Type) (a:A) := a`. In such languages, the question arises what the type of `Type` should be. Initial suggestions were for `Type` to be of type `Type`, i.e. `Type : Type`, until Girard proved that this is paradoxical. The following program is based on Per Martin-Löf's proof of this paradox in [An Intuitionistic Theory of Types, 1972][ITT].
+Most typed languages allow functions that take terms as arguments, for example `not (b:bool) := if b then false else true`. More advanced type system also allow functions that take types are arguments, for example `id (A:Type) (a:A) := a`. In such languages, the question arises what the type of `Type` should be. Initial suggestions were for `Type` to be of type `Type`, i.e. `Type : Type`, until Girard proved that this is paradoxical. The following proof is based on Per Martin-Löf's proof of Girard's paradox in [An Intuitionistic Theory of Types, 1972][ITT].
 
 This proof 
 will define a notion of ordering, 
 will show that orderings can themselves be ordered, 
-will show that all orderings are smaller than the ordering of all orderings,
+will show that all orderings are smaller than the ordering of orderings,
 and will conclude that this is a contradiction.
-
 Don't despair if all this talk of orderings of orderings makes your head hurt. This is the expected behavior --- your brain has evolved to avoid wasting resources on thinking diverging thoughts.
 
 This paradox relies heavily on the notion of an ordering, which requires that we first become familiar with transitivity and infinite chains.
@@ -86,7 +81,7 @@ For example, the identity function `id` is an _infinite ascending chain_ of the 
 
 ![][ASC]
 
-Yet, it is impossible to create an _infinite descending chain_ of the natural numbers. Consider for example the failed attempt of assigning some number `m` to `f 0` and then subtracting `n` from `m` at `f n`. This fails, because for `n >= m`, the subtraction `m - n` is defined to be `0`. Note that there exist infinite descending chains for the integers and real numbers.
+Yet, it is impossible to create an _infinite descending chain_ of the natural numbers. Consider for example the failed attempt of assigning some number `m` to `f 0` and then subtracting `n` from `m` at `f n`. This fails because for `n >= m` the subtraction `m - n` is defined to be `0`. Note that there exist infinite descending chains for the integers and real numbers.
 
     Lemma infiniteDescendingChainNat m : infiniteChain lt (fun n => m - n) -> False.
       unfold infiniteChain.
@@ -116,7 +111,7 @@ Such an ordering is necessarily irreflexive.
 
 ![][IRR]
 
-All the paradoxes we have seen so far are based on recursion. It should come to nobodies surprise that this paradox will go the same way. Therefore, we now define the _ordering of orderings_. 
+All the paradoxes we have seen so far are based on recursion. It should come to nobody's surprise that this paradox will go the same way. Therefore, we now define the _ordering of orderings_. 
 
 An ordering `o` is less than an ordering `O`, if and only if there exists an order preserving `map` that takes every element in `o`'s set to an element in `O`'s set, and there exists a `bound` in `O`'s set that is larger than the mapping of every element in `o`'s set.
 
@@ -220,7 +215,7 @@ We will need the notion of a sub-ordering of the ordering `o`. A sub-ordering is
         apply h.
     Defined.
 
-A sub-ordering is always smaller than the original ordering, and a sub-orderings with a smaller bound `a` is smaller than a sub-ordering with a larger bound `b`.
+A sub-ordering is always smaller than the original ordering, and a sub-ordering with a smaller bound `a` is smaller than a sub-ordering with a larger bound `b`.
 
     Lemma subOrderingIsLt {o:ordering} : forall a, subOrdering o a << o.
       intro a.
@@ -289,7 +284,7 @@ We just showed that the order of orderings is larger than all orderings (includi
       apply orderingOfOrderingsReflexive.
     Qed.
 
-The paradox is caused by the self-referential nature of the ordering of orderings. In general, the definition of a type is called _impredicative_ if it involves a quantifier whose domain includes the type currently being defined (see [TaPL, chapter 23][TAPL]. A _predicative_ type system enforces that such self-referential definitions cannot be made. Predicative type system are usually implemented using _stratification_ or _ramification_, where `Type` is indexed by an integer and `Type n : Type (n + 1)`, e.g. `Type 0 : Type 1 : Type 2`.
+The paradox is caused by the self-referential nature of the ordering of orderings. In general, the definition of a type is called _impredicative_ if it involves a quantifier whose domain includes the type currently being defined (see [TaPL, chapter 23][TAPL]). A _predicative_ type system enforces that such self-referential definitions cannot be made. Predicative type system are usually implemented using _stratification_ or _ramification_, where `Type` is indexed by a natural number and `Type n : Type (n + 1)`, e.g. `Type 0 : Type 1 : Type 2`.
 
 [ASC]: {{ site.url }}/assets/posts/paradoxes/nat-asc.jpg
 [DSC]: {{ site.url }}/assets/posts/paradoxes/nat-dsc.jpg
