@@ -4,10 +4,9 @@ layout: main
 header_style: max-height:50px;
 click: download('/')
 title: Konstantin Weitz
+comments: true
 info:
 ---
-
-
 
 3 Shocking Ways to Break Type Systems That Your K-12 Math Teacher Won't Tell You About
 ----------------------------------------------------------------------------
@@ -321,16 +320,3 @@ The types of most languages contain spurious values and are thus not useful for 
 [TAPL]: https://www.cis.upenn.edu/~bcpierce/tapl/ 
 [CH]: https://en.wikipedia.org/wiki/Curry–Howard_correspondence
 [KIND]: https://wiki.haskell.org/Kind
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'konne'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
