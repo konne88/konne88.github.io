@@ -3,7 +3,7 @@ content_type: md
 layout: main
 header_style: max-height:50px;
 click: download('/')
-title: Konstantin Weitz
+title: 3 Shocking Ways to Break Type Systems That Your K-12 Math Teacher Won’t Tell You About
 info:
 ---
 
@@ -302,6 +302,7 @@ The paradox is caused by the self-referential nature of the ordering of ordering
 [ITT]: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.131.926
 [QMB]: http://www.quora.com/In-type-theory-what-is-an-eliminator-and-what-is-its-opposite
 [TAPL]: https://www.cis.upenn.edu/~bcpierce/tapl/ 
+[CH]: https://en.wikipedia.org/wiki/Curry–Howard_correspondence
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
