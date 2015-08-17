@@ -293,10 +293,9 @@ The paradox is caused by the self-referential nature of the ordering of ordering
 [TRA]: {{ site.url }}/assets/posts/paradoxes/transitive.jpg
 [CCC]: {{ site.url }}/assets/posts/paradoxes/chain-implies-chain.jpg
 [OOB]: {{ site.url }}/assets/posts/paradoxes/ordering-bound.jpg
-[PAR]: {{ site.url }}/assets/posts/paradoxes/paradox.png "Based on [xkcd comic 555][XKCD]."
+[PAR]: {{ site.url }}/assets/posts/paradoxes/paradox.png "Based on https://xkcd.com/555/"
 [SRC]: {{ site.url }}/assets/posts/paradoxes/paradoxes.zip
 
-[XKCD]: https://xkcd.com/555/
 [CIC]: http://dl.acm.org/citation.cfm?id=666272
 [CPDT]: http://adam.chlipala.net/cpdt/
 [ITT]: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.131.926
