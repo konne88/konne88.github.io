@@ -8,8 +8,8 @@ comments: true
 info:
 ---
 
-3 Shocking Ways to Break Type Systems That Your K-12 Math Teacher Won't Tell You About
-----------------------------------------------------------------------------
+3 Shocking Ways to Break Mathematics
+------------------------------------
 
 This post provides formal proofs of three paradoxes that occur in type systems with unrestricted recursion, negative data types, or type in type (Girard's paradox).
 <!--more-->
