@@ -37,7 +37,7 @@ Most programming languages allow some form of unrestricted recursion or loops, w
 
 The trick is that `f` never actually has to generate a boolean value, because it delegates that responsibility to itself by calling `f`. By delegating all the work to itself though, `f` never gets anything done.
 
-Every typed mainstream programming language has this problem (including Haskell and ML). While this seems bad, it's not quite as bad as you might expect initially. In Java, a function `g` that takes a `boolean` is still guaranteed to only every be invoked with a value that is either `true` or `false` (unless Java is broken in some other way). The reason is that `g(f())` never actually calls the function `g`, because `f` never stops executing.
+Every typed mainstream programming language has this problem (including Haskell and ML). While this seems bad, it's not quite as bad as you might expect initially. In Java, a function `g` that takes a `boolean` is still guaranteed to only ever be invoked with a value that is either `true` or `false` (unless Java is broken in some other way). The reason is that `g(f())` never actually calls the function `g`, because `f` never stops executing.
 
 If you want to use Java's type system for mathematical reasoning though, you will be pleased to hear (sarcasm) that every single proposition will be true, because there is a value in every type.
 
