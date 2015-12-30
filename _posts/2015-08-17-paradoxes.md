@@ -3,7 +3,7 @@ content_type: md
 layout: main
 header_style: max-height:50px;
 click: download('/')
-title: Konstantin Weitz
+title: "Konstantin Weitz: 3 Shocking Ways to Break Mathematics"
 comments: true
 info:
 ---

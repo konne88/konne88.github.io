@@ -3,7 +3,7 @@ content_type: md
 layout: main
 header_style: max-height:50px;
 click: download('/')
-title: Konstantin Weitz
+title: "Konstantin Weitz: Abstract Data Types and Object Oriented Programming in Coq (Part I)"
 comments: true
 info:
 ---

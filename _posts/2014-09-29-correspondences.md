@@ -3,7 +3,7 @@ content_type: md
 layout: main
 header_style: max-height:50px;
 click: download('/')
-title: Konstantin Weitz
+title: "Konstantin Weitz: Connections between Natural Numbers, Types, Sets, and Propositions"
 comments: true
 info:
 ---
