@@ -7,3 +7,4 @@ excerpt_separator: <!--more-->
 layouts: ./theme/_layouts
 markdown: kramdown
 highlighter: pygments
+gems: [jekyll-feed]
