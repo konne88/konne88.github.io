@@ -173,7 +173,7 @@ Publications
             [BibTeX Entry][OCEAN-BIB],
             [Talk][OCEAN-TALK]
 
-Blog Posts <a href="feed.xml" style="background-image: url('assets/feed.png'); width: 100px"/>
+Blog Posts <a href="feed.xml"><img src="assets/feed.png" style="width:100px"/></a>
 ----------
 
 <div class="posts">
