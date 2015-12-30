@@ -2,6 +2,8 @@ themeurl: /theme
 logourl: /assets/profile.png
 iconurl: /icon.png 
 repositoryurl: https://github.com/konne88/konne88.github.io
+name: Konstantin Weitz
+url: http://konne.me/
 
 excerpt_separator: <!--more-->
 layouts: ./theme/_layouts
