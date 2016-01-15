@@ -152,6 +152,10 @@ The code is part of the Linux kernel (see [this patch][KVM-DIAG9C]).
 Publications
 ------------
 
+> "Bagpipe: Verified BGP Configuration Checking" (Tech Report)
+  by Konstantin Weitz, Dough Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.<br/>
+> Download: [Paper (PDF)][BAGPIPE-REPORT-PDF].
+ 
 > "A type system for format strings" 
   by Konstantin Weitz, Gene Kim, Siwakorn Srisakaokul, and Michael D. Ernst.
   *In ISSTA 2014.* <br/>
@@ -182,6 +186,8 @@ Blog Posts <a href="feed.xml"><img src="assets/feed.png" style="height:1em;float
   <a href="{{ post.url }}"> Read more ... </a>
 {% endfor %}
 </div>
+
+[BAGPIPE-REPORT-PDF]: http://www.cs.washington.edu/public_files/grad/tech_reports/UW-CSE-16-01-01.pdf
 
 [TSFS-PAPER-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014.pdf
 [TSFS-SLIDES-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.pdf
