@@ -1,1 +1,68 @@
+==================================================================
+https://keybase.io/k8n
+--------------------------------------------------------------------
 
+I hereby claim:
+
+  * I am an admin of http://konne.me
+  * I am k8n (https://keybase.io/k8n) on keybase.
+  * I have a public key with fingerprint 7FA1 C33B AE7E 1F23 EF4E  8AD4 73A5 66C1 C2F0 2308
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01018e545125db4598946dba9f2c4dddc853d43f61c829cfb967a1eb04ed5049ca210a",
+            "fingerprint": "7fa1c33bae7e1f23ef4e8ad473a566c1c2f02308",
+            "host": "keybase.io",
+            "key_id": "73a566c1c2f02308",
+            "kid": "01018e545125db4598946dba9f2c4dddc853d43f61c829cfb967a1eb04ed5049ca210a",
+            "uid": "dc7e79db79829723ff513c45f7771c19",
+            "username": "k8n"
+        },
+        "service": {
+            "hostname": "konne.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1454776477,
+    "expire_in": 157680000,
+    "prev": "6f8a4dbb1a2616be619731488b870c1a1c367f73d52f79429b1e77c1008f1230",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.49
+Comment: https://keybase.io/crypto
+
+yMIiAnicrVJtSBRBGL7zk64PtCwpKq4F+5OdO7uzO7tHX2QK9UOQ0qIPrp3ZWd28
+ds+9UxM9iqAfKieWJiSUQWVFWlD0KUmWEWY/gog+sajEKDQQj34VzUr+62cDw8y8
+8zzPPO8779D8VI/PG7x9c16i5dOId2QwUeMpv+U/3cBhW6/ngg1cFZ1ZaFin0Vio
+ytS5IMcDHihUghIQJB1DSVVUKOtYUw2BQF3XiSKJOhQNGRBFUImBVRlpgGIeUl3i
+oUo0AfAal88ZplVBnYhjWjEmiwwNEFHEGkUUGIJIDUgVTYdI1CRZJoAIBi+IvMKI
+lXbUZTBzWIvSgGmzGDuEZuz9A/+ffdfMyOkEUaTqGKkMjQTRMCQgEigZCCFAgOoC
+o9SxtIPU9apYXDyfY4Fak1C3pm4Ss5e2ZdEA2+ZzEceO2cQOs2hlLBYJuqRYfcRF
+1VEc+ssPYdPSWfUYoZY6UdO2uCBgSBIzXUEAJYiQzGY+Rw9FTIeGTBchIVnh2XCf
+obVMUjYUDeoYA02QgYypDFQkAqgoWEE8Ae6HyMhAoi4JBlKhoGJAESKA5xUDsOJy
+bkbVls0FJWZTq2CSUbPC0mI1DuXiDx/sTfN4fZ6M9BS3qzy+OVmzvbbkXebvoH9N
+9pvcrsVk2++fofP9jxLTu74ubM2t3TvoHDtRnfVF9P/YnH5mauLUWCJz6QMj5Uj2
+5yWZdVcLWvL6XxxuvdYu8t5uGIHappMfFgXKOncmtzReHCvK6C9M+r6Uvt9/ed+B
+3rbhRGtN6QUreP/77byeNVnFZd8GVvUvw2svNd1NNg0dHuWbhyPjOY+vT3YdXH98
+qCA+dfZ13kQfet44MJG9O6fjVWtbyZXR3OzuxWm4bmXHuY/3BuKp53uWP0nuGJwW
+NvT15m0qyPgeLl7dfCf1KHk69bl86sbGPYNtL6efbQ8sLOoSS8qm1wWEue3jP3/5
+wy0LtnYWriBg0vG85fve/AGxADsd
+=pf/P
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/k8n
+
+==================================================================
