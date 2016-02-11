@@ -152,6 +152,10 @@ The code is part of the Linux kernel (see [this patch][KVM-DIAG9C]).
 Publications
 ------------
 
+> "Bagpipe: Verified BGP Configuration Checking" (Tech Report)		
+   by Konstantin Weitz, Dough Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.<br/>		
+> Download: [Paper (PDF)][BAGPIPE-REPORT-PDF].		
+
 > "A type system for format strings" 
   by Konstantin Weitz, Gene Kim, Siwakorn Srisakaokul, and Michael D. Ernst.
   *In ISSTA 2014.* <br/>
