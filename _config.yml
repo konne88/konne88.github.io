@@ -8,5 +8,5 @@ url: http://konne.me/
 excerpt_separator: <!--more-->
 layouts: ./theme/_layouts
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 gems: [jekyll-feed]
