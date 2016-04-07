@@ -9,3 +9,4 @@ layouts: ./theme/_layouts
 markdown: kramdown
 highlighter: rouge
 gems: [jekyll-feed]
+
