@@ -5,7 +5,7 @@ repositoryurl: https://github.com/konne88/konne88.github.io
 name: Konstantin Weitz
 url: http://konne.me/
 excerpt_separator: <!--more-->
-layouts: ./theme/_layouts
+layouts: /theme/_layouts
 markdown: kramdown
 highlighter: rouge
 gems: [jekyll-feed]
