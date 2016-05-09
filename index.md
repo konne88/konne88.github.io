@@ -39,7 +39,7 @@ Bagpipe is a tool which enables an ISP to express its BGP policy in a domain-spe
 
 For more information, visit the [bagpipe website][BAGP].
 
-[BAGP]: http://konne.me/bagpipe
+[BAGP]: http://bagpipe.uwplse.org/
 [BGP-YT]: http://research.dyn.com/2008/02/pakistan-hijacks-youtube-1/ 
 [BGP-CT10]: http://research.dyn.com/2010/11/chinas-18-minute-mystery/
 [BGP-CT14]: http://research.dyn.com/2014/11/chinese-routing-errors-redirect-russian-traffic/
