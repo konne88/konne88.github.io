@@ -12,6 +12,7 @@ info:
 ------------------------------------
 
 This post provides formal proofs of three paradoxes that occur in type systems with unrestricted recursion, negative data types, or type in type (Girard's paradox).
+The title is a pun on BuzzFeedy headlines.
 <!--more-->
 The [source code of the paradoxes][SRC] is available for download.
 
