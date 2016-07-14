@@ -28,9 +28,9 @@ Open Source Projects
 ### Bagpipe: BGP Policy Verification
 
 <div class="moving-image">
-  <img src="assets/project-icons/shading.png"></img>
-  <img class="fg moving" src="assets/project-icons/bagpipe-fg.png"></img>
-  <img class="bg" src="assets/project-icons/bagpipe-bg.png"></img>
+  <img src="assets/project-icons/shading.png"/>
+  <img class="fg moving" src="assets/project-icons/bagpipe-fg.png"/>
+  <img class="bg" src="assets/project-icons/bagpipe-bg.png"/>
 </div>
 
 Internet Service Providers (ISPs) rely on the Border Gateway Protocol (BGP) to exchange routing information, which is necessary to deliver traffic over the Internet. The BGP behavior of an ISP's routers is determined by their configurations. Router misconfigurations have caused major monetary loss, performance degradation, service outages, and security violations. Some of the effects of misconfiguration are highly visible, such as the worldwide extended downtime of [YouTube in 2009][BGP-YT] and route hijacks by [China Telecom in 2010][BGP-CT10] and [2014][BGP-CT14]. Less visible is the high cost of developing and maintaining correct configurations, which requires checking invariants across hundreds of thousands of lines of configuration for all of an ISP's routers. 
@@ -49,9 +49,9 @@ For more information, visit the [bagpipe website][BAGP].
 ### Dataflow Analysis for Google error-prone
 
 <div class="moving-image">
-  <img src="assets/project-icons/shading.png"></img>
-  <img class="fg" src="assets/project-icons/ep-fg.png"></img>
-  <img class="bg moving" src="assets/project-icons/ep-bg.png"></img>
+  <img src="assets/project-icons/shading.png"/>
+  <img class="fg" src="assets/project-icons/ep-fg.png"/>
+  <img class="bg moving" src="assets/project-icons/ep-bg.png"/>
 </div>
 
 [Error­-prone][EP-LINK] is a Java compiler extension that is used in Google's
@@ -84,9 +84,9 @@ Some of the code is open source. See for example
 ### A Type System for Format Strings
 
 <div class="moving-image">
-  <img src="assets/project-icons/shading.png"></img>
-  <img class="fg" src="assets/project-icons/cf-fg.png"></img>
-  <img class="bg moving" src="assets/project-icons/cf-bg.png"></img>
+  <img src="assets/project-icons/shading.png"/>
+  <img class="fg" src="assets/project-icons/cf-fg.png"/>
+  <img class="bg moving" src="assets/project-icons/cf-bg.png"/>
 </div>
 
 Most programming languages support format strings, but their use is error-prone.
