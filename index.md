@@ -116,9 +116,9 @@ Download: [Paper (PDF)][TSFS-PAPER-PDF],
 ### Hardware Assisted Resource Overcommitment for the Linux KVM on System Z
 
 <div class="moving-image">
-  <img src="assets/project-icons/shading.png"></img>
-  <img class="fg" src="assets/project-icons/kvm-fg.png"></img>
-  <img class="bg moving" src="assets/project-icons/kvm-bg.png"></img>
+  <img src="assets/project-icons/shading.png"/>
+  <img class="fg" src="assets/project-icons/kvm-fg.png"/>
+  <img class="bg moving" src="assets/project-icons/kvm-bg.png"/>
 </div>
 
 One important advantage of virtualizing a computer’s physical resources is that
