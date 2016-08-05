@@ -14,8 +14,8 @@ topnav:
 title: Konstantin Weitz
 info: <div id="description" class="description">
         I'm a PhD student in Computer Science at the University of Washington.
-        My research is focused on Programming Languages and Software Engineering, 
-        primarily Program Verification.
+        My research is focused on Applying Programming Language Techniques to 
+        Systems. 
       </div>
       <div class="buttons">
         <button type="button" class="btn btn-default" onclick="download('assets/resume.pdf')">Download Resume</button>
