@@ -28,6 +28,8 @@ Open Source Projects
 ### DopCert: Database Optimizations Certified
 
 <div class="moving-image">
+  <img src="assets/project-icons/shading.png"/>
+  <img class="fg moving" src="assets/project-icons/shading.png"/>
   <img class="bg" src="assets/project-icons/dopcert-bg.png"/>
 </div>
 
@@ -178,7 +180,7 @@ Publications
 
 > "Scalable Verification of Border Gateway Protocol Configurations with an SMT Solver"
    by Konstantin Weitz, Dough Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
-   *In OOPSLA 2016.*</br>
+   *In OOPSLA 2016.*<br/>
 
 > "Bagpipe: Verified BGP Configuration Checking" (Tech Report)		
    by Konstantin Weitz, Dough Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.<br/>		
