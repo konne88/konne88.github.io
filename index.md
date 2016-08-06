@@ -25,6 +25,30 @@ info: <div id="description" class="description">
 Open Source Projects
 --------------------
 
+### DopCert: Database Optimizations Certified
+
+<div class="moving-image">
+  <img class="bg" src="assets/project-icons/dopcert-bg.png"/>
+</div>
+
+DopCert is a framework developed using the Coq Proof Assistant for formally
+verifing query optimizations in databases. It consists of the following parts:
+1) HoTTSQL, a SQL like language that covers all major SQL features, including
+selection-projection-join, aggregation, correlated subqueries, and indexes. We
+provide a machine checkable denotational semantics of HoTTSQL using Homotopy
+Type Theory for proving rewriting rules.
+2) A library that consists of building blocks of proofs and automatic decision
+procedures (e.g., decision procedure for conjunctive queries).
+3) Machine checkable proofs for existing rewrite rules from database literature
+as well as real-world optimizers, ranging from basic ones such as selection push
+down to complex ones such as magic sets rewrites.
+
+For more information, visit the [DopCert website][DOPW].
+
+[DOPW]: http://dopcert.cs.washington.edu/
+
+<br/>
+
 ### Bagpipe: BGP Policy Verification
 
 <div class="moving-image">
@@ -151,6 +175,10 @@ The code is part of the Linux kernel (see [this patch][KVM-DIAG9C]).
 
 Publications
 ------------
+
+> "Scalable Verification of Border Gateway Protocol Configurations with an SMT Solver"
+   by Konstantin Weitz, Dough Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
+   *In OOPSLA 2016.*</br>
 
 > "Bagpipe: Verified BGP Configuration Checking" (Tech Report)		
    by Konstantin Weitz, Dough Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.<br/>		
