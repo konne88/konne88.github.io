@@ -179,7 +179,7 @@ Publications
 ------------
 
 > "Scalable Verification of Border Gateway Protocol Configurations with an SMT Solver"
-   by Konstantin Weitz, Dough Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
+   by Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
    *In OOPSLA 2016.*<br/>
 
 > "Bagpipe: Verified BGP Configuration Checking" (Tech Report)		
