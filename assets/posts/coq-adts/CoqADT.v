@@ -4,13 +4,13 @@ content_type: md
 layout: main
 header_style: max-height:50px;
 click: download('/')
-title: "Konstantin Weitz: (Dis)advantages of using Abstract Data Types in Proof Assistants
+title: "Konstantin Weitz: (Dis)advantages of using Abstract Data Types in Proof Assistants"
 comments: true
 info:
 ---
 
 (Dis)advantages of using Abstract Data Types in Proof Assistants
-----------------------------------------------------------
+----------------------------------------------------------------
 
 This blog post explains the advantages and disadvantages of using 
 Abstract Data Types (ADTs, see TaPL Chapter 24) in a Proof Assistant. 
@@ -19,7 +19,11 @@ On the plus side, ADTs promote data representation independence, code reuse,
 and clean code extraction; but they also do not support fix/match syntax,
 have to expose derived operations, and prohibit computational reasoning.
 
-<!-- more -->
+<!--more-->
+
+Download this blog post's code [here][dl].
+
+[dl]: /assets/posts/coq-adts/CoqADT.v
 
 ### Represenation Independence
 
@@ -36,13 +40,12 @@ Consider Coq's standard library implementation of natural number addition `add`:
     *)
 
 (**
-This implementation is unsatisfactory, as it exposes the implementation details of the
+This implementation is unsatisfactory, as it exposes the data representation details of the
 `nat` datatype. For example, this implementation of `add` will not work with a more 
 space efficient binary representation of natural numbers.
 
-The standard solution to this problem is to hide the implementation of
-`nat` behind an ADT. ADTs can be
-implemented using either Modules ([see][mod], Sigma/Existential Types (see TaPL Chapter 24),
+The standard solution to this problem is to **hide the data representation using an ADT**. ADTs can be
+implemented using either Modules ([see][mod]), Sigma/Existential Types (see TaPL Chapter 24),
 Records ([see][agda]), or Type Classes ([see][tc]).
 In this blog post, we choose to implement ADTs in the Coq Proof
 Assistants using Type Classes.
@@ -110,7 +113,7 @@ natural numbers, ...
 
 (**
 We can even prove that our implementation of `add` is 
-equivalent to the standard library operation `+`.
+equivalent to the standard library operation `Nat.add` (`+`).
 **)
 
     Lemma eqAddAdd (n m : nat) : n + m = add n m.
@@ -153,12 +156,12 @@ time exponential in the number of `n`'s bits.
 
 The problem of ADTs is that they hide implementation details, and thus
 deny opportunities for optimization. 
-To overcome this problem, ADT implementors have to **guess and expose all the operations 
+To overcome this problem, ADT implementors have to guess and **expose all the operations 
 that some future instatiation of the ADT can implement more efficiently** 
 (even if they can be implemented 
 less efficiently using other operations of the ADT). The result is an ADT that 
 is hard to understand (because the essential operations are swamped by derived operations)
-and inefficient (because some optimization opportunity will inevitabliy be
+and inefficient (because some optimization opportunity will inevitably be
 lost for lack of precognition).
 **)
 
@@ -166,8 +169,8 @@ lost for lack of precognition).
 
 ### Extracting ADTs
 
-ADTs are also useful for extraction. We can instantiate an ADT **using opaque terms
-that will be implemented on extraction**. 
+**ADTs are also useful for extraction**. We can instantiate an ADT using opaque terms
+that will be implemented on extraction. 
 **)
 
     Parameter HsNat : Type.
@@ -201,7 +204,7 @@ that will be implemented on extraction**.
 This approach clearly documents all the terms that have to be implemented 
 by extraction (`Parameter`) and the assumptions about their behavior 
 (`Axiom`), and is thus cleaner than the common alternative of 
-syntactically replacing arbitrary Coq terms and datatypes:
+syntactically replacing arbitrary Coq terms and data types:
 **)
 
     Extract Inductive nat => "Integer" ["0" "succ"].
@@ -226,14 +229,14 @@ the goal.
         rewrite IHn' at 1.   (* B *)
         cbn.                 (* C *)
         reflexivity.
-        Restart.
+    Restart.
         induction n; cbn in *; congruence.
     Qed.
 
 (**
 Compare this to the proof which uses the ADT, where we have to 
 **perform equational reasoning instead of computational reasoning**.
-This is extreamly burdensome, especially for more complicated proofs.
+This is extremely burdensome, especially for more complicated proofs.
 **)
 
     Lemma addZero `{Nat} n : add zero n = add n zero.
