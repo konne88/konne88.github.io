@@ -156,13 +156,12 @@ time exponential in the number of `n`'s bits.
 
 The problem of ADTs is that they hide implementation details, and thus
 deny opportunities for optimization. 
-To overcome this problem, ADT implementors have to guess and **expose all the operations 
+To overcome this problem, ADT implementers have to guess and **expose all the operations
 that some future instatiation of the ADT can implement more efficiently** 
 (even if they can be implemented 
 less efficiently using other operations of the ADT). The result is an ADT that 
 is hard to understand (because the essential operations are swamped by derived operations)
-and inefficient (because some optimization opportunity will inevitably be
-lost for lack of precognition).
+and inefficient (because some optimization opportunity will inevitably be lost for lack of precognition).
 **)
 
 (**
