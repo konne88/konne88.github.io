@@ -180,12 +180,13 @@ that will be implemented on extraction.
     
     Extraction Language Haskell.
     
-    Extract Constant HsNat => "Integer".
+    Extract Constant HsNat => "Prelude.Integer".
     Extract Constant hsZero => "0".
-    Extract Constant hsSucc => "succ".
-    Extract Constant hsNatRect => "(\_ z s -> fix (\rec n -> if n == 0 
-                                                        then z 
-                                                        else s (pred n) (rec (pred n))))".
+    Extract Constant hsSucc => "Prelude.succ".
+    Extract Constant hsNatRect => "(\z s -> let f n = if n Prelude.== 0 
+                                                     then z 
+                                                     else s (Prelude.pred n) 
+                                                            (f (Prelude.pred n)) in f)".
     
     Instance HsNatNat : NatADT := {|
                                    Nat := HsNat;
@@ -198,6 +199,9 @@ that will be implemented on extraction.
       - apply hsNatRectSucc.
     Defined.
 
+    Definition hsAdd : HsNat := @add HsNatNat (hsSucc (hsSucc hsZero)) (hsSucc hsZero).
+    Extraction "src/Add.hs" hsAdd.
+
 (** 
 This approach clearly documents all the terms that have to be implemented 
 by extraction (`Parameter`) and the assumptions about their behavior 
@@ -205,7 +209,13 @@ by extraction (`Parameter`) and the assumptions about their behavior
 syntactically replacing arbitrary Coq terms and data types:
 **)
 
-    Extract Inductive nat => "Integer" ["0" "succ"].
+    Extract Inductive nat => "Prelude.Integer" ["0" "Prelude.succ"] 
+                                            "(\z s n -> if n Prelude.== 0 
+                                                        then z () 
+                                                        else s (Prelude.pred n))".
+    
+    Definition hsAddNat : nat := 2 + 1.
+    Extraction "src/AddNat.hs" hsAddNat.
 
 (** 
 
