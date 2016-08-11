@@ -1,5 +1,4 @@
-(**
----
+(**---
 content_type: md
 layout: main
 header_style: max-height:50px;
