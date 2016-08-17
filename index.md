@@ -178,13 +178,18 @@ The code is part of the Linux kernel (see [this patch][KVM-DIAG9C]).
 Publications
 ------------
 
+> "Formal Semantics & Verification for the Border Gateway Protocol" (Tech Report)
+   by Konstantin Weitz, Doug Woos, Arvind Krishnamurthy, Michael D. Ernst, and Zachary Tatlock.<br/>
+> Download: [Paper (PDF)][SEMANTICS-REPORT-PDF].		
+
 > "Scalable Verification of Border Gateway Protocol Configurations with an SMT Solver"
    by Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
    *In OOPSLA 2016.*<br/>
 
-> "Bagpipe: Verified BGP Configuration Checking" (Tech Report)		
-   by Konstantin Weitz, Dough Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.<br/>		
-> Download: [Paper (PDF)][BAGPIPE-REPORT-PDF].		
+> "Formal Semantics and Automated Verification for the Border Gateway Protocol"
+   by Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
+   *In NetPL 2016.*<br/>
+> Download: [Paper (PDF)][NETPL-PDF].
 
 > "A type system for format strings" 
   by Konstantin Weitz, Gene Kim, Siwakorn Srisakaokul, and Michael D. Ernst.
@@ -217,7 +222,11 @@ Blog Posts <a href="feed.xml"><img src="assets/feed.png" style="height:1em;float
 {% endfor %}
 </div>
 
+[SEMANTICS-REPORT-PDF]: https://www.cs.washington.edu/public_files/grad/tech_reports/UW-CSE-16-08-01.pdf
+
 [BAGPIPE-REPORT-PDF]: http://www.cs.washington.edu/public_files/grad/tech_reports/UW-CSE-16-01-01.pdf
+
+[NETPL-PDF]: http://conferences.sigcomm.org/sigcomm/2016/files/program/netpl/netpl16-final2.pdf
 
 [TSFS-PAPER-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014.pdf
 [TSFS-SLIDES-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.pdf
@@ -241,4 +250,5 @@ Blog Posts <a href="feed.xml"><img src="assets/feed.png" style="height:1em;float
 [KVM-DIAG9C]: https://github.com/torvalds/linux/commit/41628d334361670d825fb03c04568f5ef9f084dc
 [KVM-CMM]: https://github.com/torvalds/linux/commit/b31288fa83b2bcc8834e1e208e9526b8bd5ce361
 [KVM-PTE]: https://github.com/torvalds/linux/commit/45961722f8e30ceab9d135b1ddc0947d53aef7c3
+
 
