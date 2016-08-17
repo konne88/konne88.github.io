@@ -180,7 +180,7 @@ Publications
 
 > "Formal Semantics & Verification for the Border Gateway Protocol" (Tech Report)
    by Konstantin Weitz, Doug Woos, Arvind Krishnamurthy, Michael D. Ernst, and Zachary Tatlock.<br/>
-> Download: [Paper (PDF)][SEMANTICS-REPORT-PDF].		
+> Download: [PDF][SEMANTICS-REPORT-PDF].		
 
 > "Scalable Verification of Border Gateway Protocol Configurations with an SMT Solver"
    by Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
@@ -189,12 +189,16 @@ Publications
 > "Formal Semantics and Automated Verification for the Border Gateway Protocol"
    by Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
    *In NetPL 2016.*<br/>
-> Download: [Paper (PDF)][NETPL-PDF].
+> Download: [PDF][NETPL-PDF].
+
+> "HoTTSQL: Proving Query Rewrites with Univalent SQL Semantics (arXiv)"
+   by Shumo Chu, Konstantin Weitz, Alvin Cheung and Dan Suciu.<br/>
+> Download: [PDF][HOTTSQL-PDF]
 
 > "A type system for format strings" 
   by Konstantin Weitz, Gene Kim, Siwakorn Srisakaokul, and Michael D. Ernst.
   *In ISSTA 2014.* <br/>
-> Download: [Paper (PDF)][TSFS-PAPER-PDF], 
+> Download: [PDF][TSFS-PAPER-PDF], 
             [BibTeX Entry][TSFS-BIB],
             [Slides (PDF)][TSFS-SLIDES-PDF], 
             [Slides (ODP)][TSFS-SLIDES-ODP]
@@ -202,13 +206,13 @@ Publications
 > "A format string checker for Java" (Demo Paper)
   by Konstantin Weitz, Siwakorn Srisakaokul, Gene Kim, and Michael D. Ernst.
   *In ISSTA 2014.* <br/>
-> Download: [Paper (PDF)][TSFS-DEMO-PDF], 
+> Download: [PDF][TSFS-DEMO-PDF], 
             [BibTeX Entry][TSFS-DEMO-BIB].
  
 > "Real-Time Collaborative Analysis with (Almost) Pure SQL: A Case Study in Biogeochemical Oceanography"
   by Daniel Halperin, Francois Ribalet, Konstantin Weitz, Mak A. Saito, Bill Howe, and E. Virginia Armbrust.
   *In SSDBM 2013.* <br/>
-> Download: [Paper (PDF)][OCEAN-PAPER-PDF], 
+> Download: [PDF][OCEAN-PAPER-PDF], 
             [BibTeX Entry][OCEAN-BIB],
             [Talk][OCEAN-TALK]
 
@@ -227,6 +231,8 @@ Blog Posts <a href="feed.xml"><img src="assets/feed.png" style="height:1em;float
 [BAGPIPE-REPORT-PDF]: http://www.cs.washington.edu/public_files/grad/tech_reports/UW-CSE-16-01-01.pdf
 
 [NETPL-PDF]: http://conferences.sigcomm.org/sigcomm/2016/files/program/netpl/netpl16-final2.pdf
+
+[HOTTSQL-PDF]: https://arxiv.org/pdf/1607.04822v2.pdf
 
 [TSFS-PAPER-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014.pdf
 [TSFS-SLIDES-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.pdf
