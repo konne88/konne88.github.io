@@ -18,7 +18,7 @@ info: <div id="description" class="description">
         Systems. 
       </div>
       <div class="buttons">
-        <button type="button" class="btn btn-default" onclick="ga('send', 'event', 'Resume', 'download'); download('assets/resume.pdf')">Download Resume</button>
+        <button type="button" class="btn btn-default" onclick="ga('send', 'event', 'Resume', 'download'); window.open('assets/resume.pdf')">Download Resume</button>
       </div>
 ---
 
