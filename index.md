@@ -216,7 +216,7 @@ Publications
             [BibTeX Entry][OCEAN-BIB],
             [Talk][OCEAN-TALK]
 
-Blog Posts <a href="feed.xml"><img src="assets/feed.png" style="height:1em;float:right"/></a>
+Blog Posts <a href="feed.xml" target=”_blank” onclick=”ga('send', 'event', 'RSS', 'subscribe');”><img src="assets/feed.png" style="height:1em;float:right"/></a>
 ----------
 
 <div class="posts">
