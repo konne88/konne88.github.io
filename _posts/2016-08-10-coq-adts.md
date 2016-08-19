@@ -13,7 +13,6 @@ info:
 
 This blog post explains the advantages and disadvantages of using 
 Abstract Data Types (ADTs, see TaPL Chapter 24) in a Proof Assistant. 
-
 On the plus side, ADTs promote data representation independence, code reuse, 
 and clean code extraction; but they also do not support fix/match syntax,
 have to expose derived operations, and prohibit computational reasoning.
