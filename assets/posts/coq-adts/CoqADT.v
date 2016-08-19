@@ -237,8 +237,6 @@ the goal.
         rewrite IHn' at 1.   (* B *)
         cbn.                 (* C *)
         reflexivity.
-    Restart.
-        induction n; cbn in *; congruence.
     Qed.
 
 (**
