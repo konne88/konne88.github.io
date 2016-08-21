@@ -185,6 +185,7 @@ Publications
 > "Scalable Verification of Border Gateway Protocol Configurations with an SMT Solver"
    by Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
    *In OOPSLA 2016.*<br/>
+> Download: [PDF][BAGPIPE-PDF].		
 
 > "Formal Semantics and Automated Verification for the Border Gateway Protocol"
    by Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
@@ -233,6 +234,8 @@ Blog Posts <a href="feed.xml" target="_blank" onclick="ga('send', 'event', 'RSS'
 [NETPL-PDF]: http://conferences.sigcomm.org/sigcomm/2016/files/program/netpl/netpl16-final2.pdf
 
 [HOTTSQL-PDF]: https://arxiv.org/pdf/1607.04822v2.pdf
+
+[BAGPIPE-PDF]: assets/bagpipe.pdf
 
 [TSFS-PAPER-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014.pdf
 [TSFS-SLIDES-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.pdf
