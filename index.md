@@ -40,11 +40,7 @@ For more information, visit the SpaceSearch [github][SSGH] repository.
 
 [SSGH]: https://github.com/konne88/SpaceSearch
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<br style="clear: both"/>
 
 ### DopCert: Database Optimizations Certified
 
