@@ -25,6 +25,23 @@ info: <div id="description" class="description">
 Open Source Projects
 --------------------
 
+### SpaceSearch: Verifying Solver Aided Tools
+
+<div class="moving-image">
+  <img src="assets/project-icons/shading.png"/>
+  <img class="fg moving" src="assets/project-icons/shading.png"/>
+  <img class="bg" src="assets/project-icons/spacesearch.png"/>
+</div>
+
+SpaceSearch is a framework that enables the development of verified
+solver aided tools in the Coq proof assistant. 
+
+For more information, visit the SpaceSearch [github][SSGH] repository.
+
+[SSGH]: https://github.com/konne88/SpaceSearch
+
+<br/>
+
 ### DopCert: Database Optimizations Certified
 
 <div class="moving-image">
