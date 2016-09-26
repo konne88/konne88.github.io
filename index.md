@@ -46,7 +46,8 @@ For more information, visit the SpaceSearch [github][SSGH] repository.
 
 <br style="clear: both"/>
 
-### DopCert: Database Optimizations Certified
+### 
+Cosette: An Automated SQL Solver
 
 <div class="moving-image">
   <img src="assets/project-icons/shading.png"/>
@@ -54,7 +55,7 @@ For more information, visit the SpaceSearch [github][SSGH] repository.
   <img class="bg" src="assets/project-icons/dopcert-bg.png"/>
 </div>
 
-DopCert is a framework developed using the Coq Proof Assistant for formally
+Cosette is a framework developed using the Coq Proof Assistant for formally
 verifing query optimizations in databases. It consists of the following parts:
 1) HoTTSQL, a SQL like language that covers all major SQL features, including
 selection-projection-join, aggregation, correlated subqueries, and indexes. We
@@ -66,9 +67,9 @@ procedures (e.g., decision procedure for conjunctive queries).
 as well as real-world optimizers, ranging from basic ones such as selection push
 down to complex ones such as magic sets rewrites.
 
-For more information, visit the [DopCert website][DOPW].
+For more information, visit the [Cosette website][DOPW].
 
-[DOPW]: http://dopcert.cs.washington.edu/
+[DOPW]: http://cosette.cs.washington.edu/
 
 <br/>
 
