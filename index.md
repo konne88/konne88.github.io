@@ -33,8 +33,12 @@ Open Source Projects
   <img class="bg" src="assets/project-icons/spacesearch.png"/>
 </div>
 
-SpaceSearch is a framework that enables the development of verified
-solver aided tools in the Coq proof assistant. 
+Many effective verification tools build on automated solvers. These tools reduce
+problems in an application domain (ranging from data-race detection to compiler
+optimization validation) to the domain of a highly optimized solver like Z3.
+However, this reduction is rarely formally verified in practice, leaving the
+end-to-end soundness of the tool in question.  SpaceSearch is a library to
+verify such tools by means of a proof assistant. 
 
 For more information, visit the SpaceSearch [github][SSGH] repository.
 
