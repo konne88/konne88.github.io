@@ -46,8 +46,7 @@ For more information, visit the SpaceSearch [github][SSGH] repository.
 
 <br style="clear: both"/>
 
-### 
-Cosette: An Automated SQL Solver
+### Cosette: An Automated SQL Solver
 
 <div class="moving-image">
   <img src="assets/project-icons/shading.png"/>
