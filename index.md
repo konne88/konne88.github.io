@@ -10,12 +10,12 @@ topnav:
 - text: Publications
   url: javascript:scrollToHeading('publications')
 - text: Posts
-  url: javascript:scrollToHeading('posts')
+  url: javascript:scrollToHeading('blog-posts-a-hreffeedxml-targetblank-onclickgasend-event-rss-subscribeimg-srcassetsfeedpng-styleheight1emfloatrighta')
 title: Konstantin Weitz
 info: <div id="description" class="description">
         I'm a PhD student in Computer Science at the University of Washington.
         My research is focused on Applying Programming Language Techniques to 
-        Systems. 
+        aid System development.
       </div>
       <div class="buttons">
         <button type="button" class="btn btn-default" onclick="ga('send', 'event', 'Resume', 'download'); window.open('assets/resume.pdf')">Download Resume</button>
@@ -25,218 +25,171 @@ info: <div id="description" class="description">
 Open Source Projects
 --------------------
 
-### SpaceSearch: Verifying Solver Aided Tools
-
+<!-- SpaceSearch -->
 <div class="moving-image">
-  <img src="assets/project-icons/shading.png"/>
+  <img class="shade" src="assets/project-icons/shading.png"/>
   <img class="fg moving" src="assets/project-icons/shading.png"/>
   <img class="bg" src="assets/project-icons/spacesearch.png"/>
 </div>
 
-Many effective verification tools build on automated solvers. These tools reduce
-problems in an application domain (ranging from data-race detection to compiler
-optimization validation) to the domain of a highly optimized solver like Z3.
-However, this reduction is rarely formally verified in practice, leaving the
-end-to-end soundness of the tool in question.  SpaceSearch is a library to
-verify such tools by means of a proof assistant. 
-
-For more information, visit the SpaceSearch [github][SSGH] repository.
-
-[SSGH]: https://github.com/konne88/SpaceSearch
-
+<b>SpaceSearch</b> is a Coq library that enables the verification of solver-aided tools.
+See [website][SPACE-PROJ].
 <br style="clear: both"/>
 
-### Cosette: An Automated SQL Solver
-
+<!-- Cosette -->
 <div class="moving-image">
-  <img src="assets/project-icons/shading.png"/>
+  <img class="shade" src="assets/project-icons/shading.png"/>
   <img class="fg moving" src="assets/project-icons/shading.png"/>
   <img class="bg" src="assets/project-icons/dopcert-bg.png"/>
 </div>
 
-Cosette is a framework developed using the Coq Proof Assistant for formally
-verifing query optimizations in databases. It consists of the following parts:
-1) HoTTSQL, a SQL like language that covers all major SQL features, including
-selection-projection-join, aggregation, correlated subqueries, and indexes. We
-provide a machine checkable denotational semantics of HoTTSQL using Homotopy
-Type Theory for proving rewriting rules.
-2) A library that consists of building blocks of proofs and automatic decision
-procedures (e.g., decision procedure for conjunctive queries).
-3) Machine checkable proofs for existing rewrite rules from database literature
-as well as real-world optimizers, ranging from basic ones such as selection push
-down to complex ones such as magic sets rewrites.
+<b>Cosette</b> is a framework for solving SQL query equivalences, using the Coq proof assistant and the Rosette solver-aided language.
+See [website][HOTTSQL-PROJ], 
+    CIDR'17, 
+    [arXiv][HOTTSQL-PDF].
+<br style="clear: both"/>
 
-For more information, visit the [Cosette website][DOPW].
-
-[DOPW]: http://cosette.cs.washington.edu/
-
-<br/>
-
-### Bagpipe: BGP Policy Verification
-
+<!-- Bagpipe -->
 <div class="moving-image">
-  <img src="assets/project-icons/shading.png"/>
+  <img class="shade" src="assets/project-icons/shading.png"/>
   <img class="fg moving" src="assets/project-icons/bagpipe-fg.png"/>
   <img class="bg" src="assets/project-icons/bagpipe-bg.png"/>
 </div>
 
-Internet Service Providers (ISPs) rely on the Border Gateway Protocol (BGP) to exchange routing information, which is necessary to deliver traffic over the Internet. The BGP behavior of an ISP's routers is determined by their configurations. Router misconfigurations have caused major monetary loss, performance degradation, service outages, and security violations. Some of the effects of misconfiguration are highly visible, such as the worldwide extended downtime of [YouTube in 2009][BGP-YT] and route hijacks by [China Telecom in 2010][BGP-CT10] and [2014][BGP-CT14]. Less visible is the high cost of developing and maintaining correct configurations, which requires checking invariants across hundreds of thousands of lines of configuration for all of an ISP's routers. 
+<b>Bagpipe</b> verifies the BGP router configurations that ISPs use to select and propagate routing information across the Internet. 
+   See [website][BAGPIPE-PROJ],
+       [NetPL'16][NETPL-PDF], 
+       [OOPSLA'16][BAGPIPE-DOI].
+<br style="clear: both"/>
 
-Bagpipe is a tool which enables an ISP to express its BGP policy in a domain-specific specification language and verify that its router configurations implement this policy. We evaluated Bagpipe on Internet2 and Selfnet, two ISPs with a combined total of over 100,000 lines of router configuration. We identified and expressed policies for these ISPs, and found 19 inconsistencies between the policies and the router configurations without issuing any false positives.
-
-For more information, visit the [bagpipe website][BAGP].
-
-[BAGP]: http://bagpipe.uwplse.org/
-[BGP-YT]: http://research.dyn.com/2008/02/pakistan-hijacks-youtube-1/ 
-[BGP-CT10]: http://research.dyn.com/2010/11/chinas-18-minute-mystery/
-[BGP-CT14]: http://research.dyn.com/2014/11/chinese-routing-errors-redirect-russian-traffic/
-
-<br/>
-
-### Dataflow Analysis for Google error-prone
-
+<!-- Error Prone -->
 <div class="moving-image">
-  <img src="assets/project-icons/shading.png"/>
+  <img class="shade" src="assets/project-icons/shading.png"/>
   <img class="fg" src="assets/project-icons/ep-fg.png"/>
   <img class="bg moving" src="assets/project-icons/ep-bg.png"/>
 </div>
 
-[Error­-prone][EP-LINK] is a Java compiler extension that is used in Google's
-internal build system to eliminate classes of serious bugs from entering the
-code base.
+<b>Error Prone</b> is a static analysis tool for Java that catches programming mistakes at compile-time.
+During my Google internship, I extended error prone with a dataflow analysis framework, which
+is run at Google with every Java code commit. 
+See [error prone website][EP-LINK], and some of my commits 
+    [here][EP-BOOL],
+    [here][EP-PERF], 
+    [here][EP-CASE].
+<br style="clear: both"/>
 
-Error-prone checks used to be based on AST matching, which made it hard to write
-checks that require flow-sensitive information.
-For example, one might want to check that 
-  a field access does not happen with a `null` variable, 
-  or that a lock is released after it is acquired.
-
-During my Google internship, I ported the [Checker Framework][CF-LINK]'s
-dataflow framework to error-prone (the port required 
-  bug fixes, 
-  performance improvements,
-  feature enhancements, and 
-  infrastructure changes).
-
-It is now easy to write flow-sensitive error-prone checks. Some of these checks
-are run at Google with every Java code commit.
-
-Some of the code is open source. See for example 
-  [Boolean equality bug fix][EP-BOOL], 
-  [performance improvements][EP-PERF], and 
-  [enhanced switch support][EP-CASE].
-
-<br/>
-
-### A Type System for Format Strings
-
+<!-- Format Strings -->
 <div class="moving-image">
-  <img src="assets/project-icons/shading.png"/>
+  <img class="shade" src="assets/project-icons/shading.png"/>
   <img class="fg" src="assets/project-icons/cf-fg.png"/>
   <img class="bg moving" src="assets/project-icons/cf-bg.png"/>
 </div>
 
-Most programming languages support format strings, but their use is error-prone.
-Using the wrong format string syntax, or passing the wrong number or type of
-arguments, leads to unintelligible text output, program crashes, or security
-vulnerabilities.
+<b>A Type System for Format Strings</b> (which are passed to printf).
+On 6 large and well-maintained open-source Java projects, format string bugs were common 
+(our type system found 104 bugs), and can be avoided with little effort using our type system
+(on average, for every bug found, only 1.0 type system annotations need to be written).
+See [ISSTA'14][TSFS-PAPER-PDF], 
+    [ISSTA'14 (demo)][TSFS-DEMO-PDF],
+    [manual][TSFS-IMPL].
+<br style="clear: both"/>
 
-In this project, we developed a type system that guarantees that calls to format
-string APIs will never fail. In Java, this means that the API will not throw
-exceptions. In C, this means that the API will not return negative values,
-corrupt memory, etc.
-
-We instantiated this type system for Java's Formatter API, and evaluated it on 6
-large and well-maintained open-source projects. Format string bugs are common in
-practice (our type system found 104 bugs), and the annotation burden on the user
-of our type system is low (on average, for every bug found, only 1.0 annotations
-need to be written).
-
-Download: [Paper (PDF)][TSFS-PAPER-PDF], 
-          [Slides (PDF)][TSFS-SLIDES-PDF], 
-          [Slides (ODP)][TSFS-SLIDES-ODP], 
-          [Demo Paper (PDF)][TSFS-DEMO-PDF], 
-          [Format String Checker Implementation][TSFS-IMPL]
-
-<br/>
-
-### Hardware Assisted Resource Overcommitment for the Linux KVM on System Z
-
+<!-- KVM -->
 <div class="moving-image">
-  <img src="assets/project-icons/shading.png"/>
+  <img class="shade" src="assets/project-icons/shading.png"/>
   <img class="fg" src="assets/project-icons/kvm-fg.png"/>
   <img class="bg moving" src="assets/project-icons/kvm-bg.png"/>
 </div>
 
+<b>Hardware Assisted Guest-Hypervisor Information Sharing</b> for the Linux Kernel Virtual Machine (KVM) on IBM's System Z.
+During an IBM internship, I extended the Linux KVM to 
+use guest information about memory usage and spinlocks
+to improve memory allocation and scheduling decisions.
+<a data-toggle="collapse" href="#more-kvm" aria-expanded="false" aria-controls="more-kvm">Read more ...</a>
+
+<div class="collapse" id="more-kvm">
+<div class="card card-block" markdown="block">
 One important advantage of virtualizing a computer’s physical resources is that
 it enables resource overcommitment (more resources are promised than can
 be delivered, in the hope that they will not actually be used).
-
 Traditionally, memory overcommitment has been handled by 
-  lazily assigning memory to the virtualized guest, 
-  dynamically redistributing the guests’ memory, or 
-  swapping out guest memory.
+lazily assigning memory to the virtualized guest, 
+dynamically redistributing the guests’ memory, or 
+swapping out guest memory.
 These techniques have problems, that we overcame by sharing more information 
 about memory usage between the hypervisor (Linux KVM) and guest 
 (any Operating System), in an approach called Collaborative Memory Management 
-(CMM). 
-The code is part of the Linux kernel (see
-  [this patch][KVM-CMM], and
-  [this follow up patch][KVM-PTE]).
-
+(CMM). The code is part of the Linux kernel, see
+[this patch][KVM-CMM], and
+[this follow up patch][KVM-PTE].
+ 
 A spinlock is a commonly used locking primitive that spins in an idle loop until
 the accessed resource becomes unlocked.
-If the CPU is overcommited (there are more virtual cores than physical cores)
-not all virtual cores can run at the same time.
 In such a scenario, holding a spinlock can waste large amounts of CPU time.
 We overcame this problem by sharing information about held spinlocks between
 the hypervisor and guest, which allows the hypervisor to make better CPU 
-scheduling descisions.
-The code is part of the Linux kernel (see [this patch][KVM-DIAG9C]).
+scheduling decisions.
+The code is part of the Linux kernel, see [this patch][KVM-DIAG9C].
+
+</div>
+</div>
+
 
 <br/>
 
 Publications
 ------------
 
+<!--
 > "Formal Semantics & Verification for the Border Gateway Protocol" (Tech Report)
-   by Konstantin Weitz, Doug Woos, Arvind Krishnamurthy, Michael D. Ernst, and Zachary Tatlock.<br/>
-> Download: [PDF][SEMANTICS-REPORT-PDF].		
+   by Konstantin Weitz, Doug Woos, Arvind Krishnamurthy, Michael D. Ernst, and Zachary Tatlock.
+> Download: [PDF][SEMANTICS-REPORT-PDF].
+-->
 
-> "Scalable Verification of Border Gateway Protocol Configurations with an SMT Solver"
-   by Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
-   *In OOPSLA 2016.*<br/>
-> Download: [PDF][BAGPIPE-PDF].		
+- Shumo Chu, Chenglong Wang, Konstantin Weitz, and Alvin Cheung. 
+  "Cosette: An Automated SQL Solver".
+  *In CIDR 2017 (To Appear).*
+  See [project][HOTTSQL-PROJ].
 
-> "Formal Semantics and Automated Verification for the Border Gateway Protocol"
-   by Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
-   *In NetPL 2016.*<br/>
-> Download: [PDF][NETPL-PDF].
+- Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
+  "Scalable Verification of Border Gateway Protocol Configurations with an SMT Solver".
+  *In OOPSLA 2016.*
+  See [paper (pdf)][BAGPIPE-PDF].		
+      [doi][BAGPIPE-DOI],
+      [project][BAGPIPE-PROJ].
 
-> "HoTTSQL: Proving Query Rewrites with Univalent SQL Semantics (arXiv)"
-   by Shumo Chu, Konstantin Weitz, Alvin Cheung and Dan Suciu.<br/>
-> Download: [PDF][HOTTSQL-PDF]
+- Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
+  "Formal Semantics and Automated Verification for the Border Gateway Protocol".
+  *In NetPL 2016.*
+  See [paper (pdf)][NETPL-PDF], 
+      [slides (pdf)][NETPL-SLIDES],
+      [bib][NETPL-BIB],
+      [project][BAGPIPE-PROJ].
 
-> "A type system for format strings" 
-  by Konstantin Weitz, Gene Kim, Siwakorn Srisakaokul, and Michael D. Ernst.
-  *In ISSTA 2014.* <br/>
-> Download: [PDF][TSFS-PAPER-PDF], 
-            [BibTeX Entry][TSFS-BIB],
-            [Slides (PDF)][TSFS-SLIDES-PDF], 
-            [Slides (ODP)][TSFS-SLIDES-ODP]
+- Shumo Chu, Konstantin Weitz, Alvin Cheung and Dan Suciu.
+  "HoTTSQL: Proving Query Rewrites with Univalent SQL Semantics".
+  *arXiv 2016.*
+  See [paper (pdf)][HOTTSQL-PDF].
+
+- Konstantin Weitz, Gene Kim, Siwakorn Srisakaokul, and Michael D. Ernst.
+  "A Type System for Format Strings".
+  *In ISSTA 2014.* 
+  See [paper (pdf)][TSFS-PAPER-PDF], 
+      [doi][TSFS-PAPER-DOI],
+      [slides (pdf)][TSFS-SLIDES-PDF].
  
-> "A format string checker for Java" (Demo Paper)
-  by Konstantin Weitz, Siwakorn Srisakaokul, Gene Kim, and Michael D. Ernst.
-  *In ISSTA 2014.* <br/>
-> Download: [PDF][TSFS-DEMO-PDF], 
-            [BibTeX Entry][TSFS-DEMO-BIB].
+- Konstantin Weitz, Siwakorn Srisakaokul, Gene Kim, and Michael D. Ernst.
+  "A Format String Checker for Java".
+  *In ISSTA 2014 (Demo Paper).*
+  See [paper (pdf)][TSFS-DEMO-PDF], 
+      [doi][TSFS-DEMO-DOI].
  
-> "Real-Time Collaborative Analysis with (Almost) Pure SQL: A Case Study in Biogeochemical Oceanography"
-  by Daniel Halperin, Francois Ribalet, Konstantin Weitz, Mak A. Saito, Bill Howe, and E. Virginia Armbrust.
-  *In SSDBM 2013.* <br/>
-> Download: [PDF][OCEAN-PAPER-PDF], 
-            [BibTeX Entry][OCEAN-BIB],
-            [Talk][OCEAN-TALK]
+- Daniel Halperin, Francois Ribalet, Konstantin Weitz, Mak A. Saito, Bill Howe, and E. Virginia Armbrust.
+  "Real-Time Collaborative Analysis with (Almost) Pure SQL: A Case Study in Biogeochemical Oceanography".
+  *In SSDBM 2013.*
+  See [paper (pdf)][OCEAN-PAPER-PDF], 
+      [doi][OCEAN-DOI],
+      [talk (video)][OCEAN-TALK].
 
 Blog Posts <a href="feed.xml" target="_blank" onclick="ga('send', 'event', 'RSS', 'subscribe');"><img src="assets/feed.png" style="height:1em;float:right"/></a>
 ----------
@@ -248,27 +201,39 @@ Blog Posts <a href="feed.xml" target="_blank" onclick="ga('send', 'event', 'RSS'
 {% endfor %}
 </div>
 
+
+[SPACE-PROJ]: https://github.com/konne88/SpaceSearch
+
 [SEMANTICS-REPORT-PDF]: https://www.cs.washington.edu/public_files/grad/tech_reports/UW-CSE-16-08-01.pdf
 
 [BAGPIPE-REPORT-PDF]: http://www.cs.washington.edu/public_files/grad/tech_reports/UW-CSE-16-01-01.pdf
 
 [NETPL-PDF]: http://conferences.sigcomm.org/sigcomm/2016/files/program/netpl/netpl16-final2.pdf
+[NETPL-SLIDES]: http://conferences.sigcomm.org/sigcomm/2016/files/program/netpl/netpl16-weitz.pdf
+[NETPL-LINK]: http://conferences.sigcomm.org/sigcomm/2016/netpl.php
+[NETPL-BIB]: assets/bibtex/netpl-16.bib
 
+[HOTTSQL-PROJ]: http://cosette.cs.washington.edu/
 [HOTTSQL-PDF]: https://arxiv.org/pdf/1607.04822v2.pdf
 
+[BAGPIPE-PROJ]: http://bagpipe.uwplse.org/
 [BAGPIPE-PDF]: assets/bagpipe.pdf
+[BAGPIPE-DOI]: http://dl.acm.org/citation.cfm?doid=2983990.2984012
 
 [TSFS-PAPER-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014.pdf
+[TSFS-PAPER-DOI]: http://dl.acm.org/citation.cfm?doid=2610384.2610417 
 [TSFS-SLIDES-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.pdf
 [TSFS-SLIDES-ODP]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-slides.odp
 [TSFS-DEMO-PDF]: http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-demo.pdf
-[TSFS-IMPL]: http://types.cs.washington.edu/checker-framework/current/checkers-manual.html#formatter-checker
+[TSFS-DEMO-DOI]: http://dl.acm.org/citation.cfm?doid=2610384.2628056
+[TSFS-IMPL]: http://types.cs.washington.edu/checker-framework/current/checker-framework-manual.html#formatter-checker
 [TSFS-BIB]: assets/bibtex/tsfs.bib
 [TSFS-DEMO-BIB]: assets/bibtex/tsfs-demo.bib
 
 [OCEAN-PAPER-PDF]: http://homes.cs.washington.edu/~dhalperi/pubs/halperin_2013_ssdbm_geomics_case_study.pdf
 [OCEAN-TALK]: http://research.microsoft.com/apps/video/default.aspx?id=200713
 [OCEAN-BIB]: assets/bibtex/ocean.bib
+[OCEAN-DOI]: http://dl.acm.org/citation.cfm?doid=2484838.2484880
 
 [EP-LINK]: https://code.google.com/p/error-prone/
 [EP-CASE]: https://code.google.com/p/checker-framework/source/detail?r=4b4210dad872d2a30962d6cb653855bdeae7a922
