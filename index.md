@@ -45,7 +45,7 @@ See [website][SPACE-PROJ].
 
 <b>Cosette</b> is a framework for solving SQL query equivalences, using the Coq proof assistant and the Rosette solver-aided language.
 See [website][HOTTSQL-PROJ], 
-    CIDR'17, 
+    CIDR'17 (to appear), 
     [arXiv][HOTTSQL-PDF].
 <br style="clear: both"/>
 
@@ -148,7 +148,7 @@ Publications
 
 - Shumo Chu, Chenglong Wang, Konstantin Weitz, and Alvin Cheung. 
   "Cosette: An Automated SQL Solver".
-  *In CIDR 2017 (To Appear).*
+  *In CIDR 2017 (to appear).*
   See [project][HOTTSQL-PROJ].
 
 - Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
