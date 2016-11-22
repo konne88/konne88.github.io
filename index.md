@@ -25,19 +25,6 @@ info: <div id="description" class="description">
 Open Source Projects
 --------------------
 
-<!-- SpaceSearch -->
-<div class="moving-image">
-  <img class="shade" src="assets/project-icons/shading.png"/>
-  <img class="fg moving" src="assets/project-icons/shading.png"/>
-  <img class="bg" src="assets/project-icons/spacesearch.png"/>
-</div>
-
-<b>SpaceSearch</b> is a Coq library that enables the verification of solver-aided tools.
-We used SpaceSearch to build and verify: Bagpipe, and [SaltShaker][SALTSHAKER] which identified 7 bugs in the RockSalt and 1 bug in the STOKE x86 semantics.
-See [website][SPACE-PROJ],
-    [tech report][SPACESEARCH-REPORT-PDF].
-<br style="clear: both"/>
-
 <!-- Bagpipe -->
 <div class="moving-image">
   <img class="shade" src="assets/project-icons/shading.png"/>
@@ -54,6 +41,19 @@ to formalize Gao & Rexford's proof on the convergence of BGP (revealing a necess
        [OOPSLA'16][BAGPIPE-DOI],
        [NetPL'16][NETPL-PDF],
        [tech report][SEMANTICS-REPORT-PDF].
+<br style="clear: both"/>
+
+<!-- SpaceSearch -->
+<div class="moving-image">
+  <img class="shade" src="assets/project-icons/shading.png"/>
+  <img class="fg moving" src="assets/project-icons/shading.png"/>
+  <img class="bg" src="assets/project-icons/spacesearch.png"/>
+</div>
+
+<b>SpaceSearch</b> is a Coq library that enables the verification of solver-aided tools.
+We used SpaceSearch to build and verify: Bagpipe, and [SaltShaker][SALTSHAKER] which identified 7 bugs in the RockSalt and 1 bug in the STOKE x86 semantics.
+See [website][SPACE-PROJ],
+    [tech report][SPACESEARCH-REPORT-PDF].
 <br style="clear: both"/>
 
 <!-- Cosette -->
