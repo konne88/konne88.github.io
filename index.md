@@ -38,19 +38,6 @@ See [website][SPACE-PROJ],
     [tech report][SPACESEARCH-REPORT-PDF].
 <br style="clear: both"/>
 
-<!-- Cosette -->
-<div class="moving-image">
-  <img class="shade" src="assets/project-icons/shading.png"/>
-  <img class="fg moving" src="assets/project-icons/shading.png"/>
-  <img class="bg" src="assets/project-icons/dopcert-bg.png"/>
-</div>
-
-<b>Cosette</b> is a framework for solving SQL query equivalences, using the Coq proof assistant and the Rosette solver-aided language.
-See [website][HOTTSQL-PROJ], 
-    CIDR'17 (to appear), 
-    [arXiv][HOTTSQL-PDF].
-<br style="clear: both"/>
-
 <!-- Bagpipe -->
 <div class="moving-image">
   <img class="shade" src="assets/project-icons/shading.png"/>
@@ -67,6 +54,19 @@ to formalize Gao & Rexford's proof on the convergence of BGP (revealing a necess
        [OOPSLA'16][BAGPIPE-DOI],
        [NetPL'16][NETPL-PDF],
        [tech report][SEMANTICS-REPORT-PDF].
+<br style="clear: both"/>
+
+<!-- Cosette -->
+<div class="moving-image">
+  <img class="shade" src="assets/project-icons/shading.png"/>
+  <img class="fg moving" src="assets/project-icons/shading.png"/>
+  <img class="bg" src="assets/project-icons/dopcert-bg.png"/>
+</div>
+
+<b>Cosette</b> is a framework for solving SQL query equivalences, using the Coq proof assistant and the Rosette solver-aided language.
+See [website][HOTTSQL-PROJ], 
+    CIDR'17 (to appear), 
+    [arXiv][HOTTSQL-PDF].
 <br style="clear: both"/>
 
 <!-- Error Prone -->
