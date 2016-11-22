@@ -33,7 +33,9 @@ Open Source Projects
 </div>
 
 <b>SpaceSearch</b> is a Coq library that enables the verification of solver-aided tools.
-See [website][SPACE-PROJ].
+We used SpaceSearch to build and verify: Bagpipe, and [SaltShaker][SALTSHAKER] which identified 7 bugs in the RockSalt and 1 bug in the STOKE x86 semantics.
+See [website][SPACE-PROJ],
+    [tech report][SPACESEARCH-REPORT-PDF].
 <br style="clear: both"/>
 
 <!-- Cosette -->
@@ -56,10 +58,15 @@ See [website][HOTTSQL-PROJ],
   <img class="bg" src="assets/project-icons/bagpipe-bg.png"/>
 </div>
 
-<b>Bagpipe</b> verifies the BGP router configurations that ISPs use to select and propagate routing information across the Internet. 
+<b>Bagpipe</b> verifies Border Gateway Protocol (BGP) router configurations, and
+identified 19 inconsistencies in over 240 KLOC of industrial configurations.
+We also developed the first mechanized formal semantics of BGP, 
+which we used to verify Bagpipe, and 
+to formalize Gao & Rexford's proof on the convergence of BGP (revealing a necessary extension).
    See [website][BAGPIPE-PROJ],
-       [NetPL'16][NETPL-PDF], 
-       [OOPSLA'16][BAGPIPE-DOI].
+       [OOPSLA'16][BAGPIPE-DOI],
+       [NetPL'16][NETPL-PDF],
+       [tech report][SEMANTICS-REPORT-PDF].
 <br style="clear: both"/>
 
 <!-- Error Prone -->
@@ -140,12 +147,6 @@ The code is part of the Linux kernel, see [this patch][KVM-DIAG9C].
 Publications
 ------------
 
-<!--
-> "Formal Semantics & Verification for the Border Gateway Protocol" (Tech Report)
-   by Konstantin Weitz, Doug Woos, Arvind Krishnamurthy, Michael D. Ernst, and Zachary Tatlock.
-> Download: [PDF][SEMANTICS-REPORT-PDF].
--->
-
 - Shumo Chu, Chenglong Wang, Konstantin Weitz, and Alvin Cheung. 
   "Cosette: An Automated SQL Solver".
   *In CIDR 2017 (to appear).*
@@ -158,6 +159,11 @@ Publications
       [doi][BAGPIPE-DOI],
       [project][BAGPIPE-PROJ].
 
+- Konstantin Weitz, Doug Woos, Arvind Krishnamurthy, Michael D. Ernst, and Zachary Tatlock.
+  "Formal Semantics & Verification for the Border Gateway Protocol".
+  *Tech Report 2016*.
+  See [tech report (pdf)][SEMANTICS-REPORT-PDF].
+
 - Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
   "Formal Semantics and Automated Verification for the Border Gateway Protocol".
   *In NetPL 2016.*
@@ -165,6 +171,12 @@ Publications
       [slides (pdf)][NETPL-SLIDES],
       [bib][NETPL-BIB],
       [project][BAGPIPE-PROJ].
+
+- Konstantin Weitz, Steven Lyubomirksy, Stefan Heule, Emina Torlak, Michael D. Ernst, and Zachary Tatlock.
+  "SpaceSearch: A Library for Building and Verifying Solver-Aided Tools".
+  *Tech Report 2016*.
+  See [tech report (pdf)][SPACESEARCH-REPORT-PDF],
+      [project][SPACE-PROJ].
 
 - Shumo Chu, Konstantin Weitz, Alvin Cheung and Dan Suciu.
   "HoTTSQL: Proving Query Rewrites with Univalent SQL Semantics".
@@ -202,7 +214,11 @@ Blog Posts <a href="feed.xml" target="_blank" onclick="ga('send', 'event', 'RSS'
 </div>
 
 
+[SALTSHAKER]: https://github.com/uwplse/SaltShaker
+
 [SPACE-PROJ]: https://github.com/konne88/SpaceSearch
+
+[SPACESEARCH-REPORT-PDF]: https://www.cs.washington.edu/public_files/grad/tech_reports/UW-CSE-16-11-02.pdf
 
 [SEMANTICS-REPORT-PDF]: https://www.cs.washington.edu/public_files/grad/tech_reports/UW-CSE-16-08-01.pdf
 
