@@ -157,7 +157,8 @@ Publications
   *In OOPSLA 2016.*
   See [paper (pdf)][BAGPIPE-PDF].		
       [doi][BAGPIPE-DOI],
-      [project][BAGPIPE-PROJ].
+      [project][BAGPIPE-PROJ],
+      [talk (video)][BAGPIPE-TALK].
 
 - Konstantin Weitz, Doug Woos, Arvind Krishnamurthy, Michael D. Ernst, and Zachary Tatlock.
   "Formal Semantics & Verification for the Border Gateway Protocol".
@@ -209,7 +210,7 @@ Blog Posts <a href="feed.xml" target="_blank" onclick="ga('send', 'event', 'RSS'
 <div class="posts">
 {% for post in site.posts %}
   {{ post.excerpt }}
-  <a href="{{ post.url }}"> Read more ... </a>
+  <a href="{% if post.redirect %}{{ post.redirect }}{% else %}{{ post.url }}{% endif %}"> Read more ... </a>
 {% endfor %}
 </div>
 
@@ -232,6 +233,7 @@ Blog Posts <a href="feed.xml" target="_blank" onclick="ga('send', 'event', 'RSS'
 [HOTTSQL-PROJ]: http://cosette.cs.washington.edu/
 [HOTTSQL-PDF]: https://arxiv.org/pdf/1607.04822v2.pdf
 
+[BAGPIPE-TALK]: https://www.youtube.com/watch?v=eKB5Vj0PsIk 
 [BAGPIPE-PROJ]: http://bagpipe.uwplse.org/
 [BAGPIPE-PDF]: assets/bagpipe.pdf
 [BAGPIPE-DOI]: http://dl.acm.org/citation.cfm?doid=2983990.2984012
