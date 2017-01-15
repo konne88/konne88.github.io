@@ -15,7 +15,8 @@ title: Konstantin Weitz
 info: <div id="description" class="description">
         I'm a PhD student in Computer Science at the University of Washington.
         My research is focused on Applying Programming Language Techniques to 
-        aid System development. I'm expecting to graduate February 2017.
+        aid System development. I'm expecting to graduate in the first quarter
+        of 2017.
       </div>
       <div class="buttons">
         <button type="button" class="btn btn-default" onclick="ga('send', 'event', 'Resume', 'download'); window.open('assets/resume.pdf')">Download Resume</button>
