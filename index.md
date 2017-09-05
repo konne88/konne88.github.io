@@ -13,10 +13,9 @@ topnav:
   url: javascript:scrollToHeading('blog-posts-a-hreffeedxml-targetblank-onclickgasend-event-rss-subscribeimg-srcassetsfeedpng-styleheight1emfloatrighta')
 title: Konstantin Weitz
 info: <div id="description" class="description">
-        I'm a PhD student in Computer Science at the University of Washington.
-        My research is focused on Applying Programming Language Techniques to 
-        aid System development. I'm expecting to graduate in the first quarter
-        of 2017.
+        I'm a Software Engineer at Google in Amin Vahdat's Networking Group. 
+        I received my PhD in Computer Science at the University of Washington, 
+        advised by Zachary Tatlock and Michael D. Ernst.
       </div>
       <div class="buttons">
         <button type="button" class="btn btn-default" onclick="ga('send', 'event', 'Resume', 'download'); window.open('assets/resume.pdf')">Download Resume</button>
