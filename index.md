@@ -147,6 +147,12 @@ The code is part of the Linux kernel, see [this patch][KVM-DIAG9C].
 Publications
 ------------
 
+- Konstantin Weitz, Steven Lyubomirsky, Stefan Heule, Emina Torlak, Michael D. Ernst, and Zachary Tatlock.
+  "SpaceSearch: A Library for Building and Verifying Solver-Aided Tools"
+  *In ICFP 2017.*
+  See [paper (pdf)][SS-PDF].		
+      [doi][SS-DOI].
+
 - Shumo Chu, Chenglong Wang, Konstantin Weitz, and Alvin Cheung. 
   "Cosette: An Automated SQL Solver".
   *In CIDR 2017 (to appear).*
@@ -264,4 +270,5 @@ Blog Posts <a href="feed.xml" target="_blank" onclick="ga('send', 'event', 'RSS'
 [KVM-CMM]: https://github.com/torvalds/linux/commit/b31288fa83b2bcc8834e1e208e9526b8bd5ce361
 [KVM-PTE]: https://github.com/torvalds/linux/commit/45961722f8e30ceab9d135b1ddc0947d53aef7c3
 
-
+[SS-DOI]: https://doi.org/10.1145/3110269
+[SS-PDF]: http://dl.acm.org/ft_gateway.cfm?id=3110269&ftid=1902052&dwn=1&CFID=805487198&CFTOKEN=33238197
