@@ -53,7 +53,7 @@ to formalize Gao & Rexford's proof on the convergence of BGP (revealing a necess
 <b>SpaceSearch</b> is a Coq library that enables the verification of solver-aided tools.
 We used SpaceSearch to build and verify: Bagpipe, and [SaltShaker][SALTSHAKER] which identified 7 bugs in the RockSalt and 1 bug in the STOKE x86 semantics.
 See [website][SPACE-PROJ],
-    [tech report][SPACESEARCH-REPORT-PDF].
+    [paper][SS-PDF].
 <br style="clear: both"/>
 
 <!-- Cosette -->
@@ -150,12 +150,18 @@ Publications
 - Konstantin Weitz, Steven Lyubomirsky, Stefan Heule, Emina Torlak, Michael D. Ernst, and Zachary Tatlock.
   "SpaceSearch: A Library for Building and Verifying Solver-Aided Tools"
   *In ICFP 2017.*
-  See [paper (pdf)][SS-PDF].		
-      [doi][SS-DOI].
+  See [paper (pdf)][SS-PDF],	
+      [doi][SS-DOI],
+      [project][SPACE-PROJ].
+
+- Shumo Chu, Konstantin Weitz, Alvin Cheung and Dan Suciu.
+  "HoTTSQL: Proving Query Rewrites with Univalent SQL Semantics".
+  *In PLDI 2017.*
+  See [paper (pdf)][HOTTSQL-PDF].
 
 - Shumo Chu, Chenglong Wang, Konstantin Weitz, and Alvin Cheung. 
   "Cosette: An Automated SQL Solver".
-  *In CIDR 2017 (to appear).*
+  *In CIDR 2017.*
   See [project][HOTTSQL-PROJ].
 
 - Konstantin Weitz, Doug Woos, Emina Torlak, Michael D. Ernst, Arvind Krishnamurthy, and Zachary Tatlock.
@@ -178,17 +184,6 @@ Publications
       [slides (pdf)][NETPL-SLIDES],
       [bib][NETPL-BIB],
       [project][BAGPIPE-PROJ].
-
-- Konstantin Weitz, Steven Lyubomirksy, Stefan Heule, Emina Torlak, Michael D. Ernst, and Zachary Tatlock.
-  "SpaceSearch: A Library for Building and Verifying Solver-Aided Tools".
-  *Tech Report 2016*.
-  See [tech report (pdf)][SPACESEARCH-REPORT-PDF],
-      [project][SPACE-PROJ].
-
-- Shumo Chu, Konstantin Weitz, Alvin Cheung and Dan Suciu.
-  "HoTTSQL: Proving Query Rewrites with Univalent SQL Semantics".
-  *arXiv 2016.*
-  See [paper (pdf)][HOTTSQL-PDF].
 
 - Konstantin Weitz, Gene Kim, Siwakorn Srisakaokul, and Michael D. Ernst.
   "A Type System for Format Strings".
